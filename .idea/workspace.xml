@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bc0f50f-0ebc-4bc6-a601-758452da705d" name="Default Changelist" comment="" />
+    <list default="true" id="9bc0f50f-0ebc-4bc6-a601-758452da705d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.db" beforeDir="false" afterPath="$PROJECT_DIR$/server.db" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +19,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1joi6egUWajvDbhtK9DVmEHKOsE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,6 +31,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunManager" selected="Python.body1">
     <configuration name="body (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -157,22 +167,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="496" y="39" key="#1/0.0.1536.824@0.0.1536.824" timestamp="1604490260442" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1605902356013">
+    <state x="424" y="7" key="CommitChangelistDialog2" timestamp="1605968646785">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605902356013" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1605902356013">
+    <state x="424" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605968646785" />
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1605969407032">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605902356013" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1605902356013">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605969407032" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1605969407032">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605902356013" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1605902356013">
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605969407032" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1605969407032">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605902356013" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605969407032" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1605969407032">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605969407032" />
     <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1605807876373">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

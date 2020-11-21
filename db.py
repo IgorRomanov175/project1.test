@@ -22,6 +22,38 @@ with sq.connect('server.db') as con:
 
     con.commit()
 
-    sql.execute("SELECT internal, external FROM heat_transfer_coefficient WHERE internal = 8.7")
+    sql.execute(
+        """SELECT internal, external FROM heat_transfer_coefficient 
+        WHERE name_id = 1 """)
     for result in sql:
-        print(result['internal'], result['external'])
+        print(result[1])
+
+    sql.execute(
+        """SELECT internal, external FROM heat_transfer_coefficient 
+        WHERE name_id = 2""")
+    for result in sql:
+        print(result[1])
+
+    sql.execute(
+        """SELECT internal, external FROM heat_transfer_coefficient
+        WHERE name_id = '3' """)
+    for result in sql:
+        print(result[1])
+
+    sql.execute(
+        """SELECT internal, external FROM heat_transfer_coefficient
+        WHERE name_id = '4' """)
+    for result in sql:
+        print(result[1])
+
+    sql.execute(
+        """SELECT internal, external FROM heat_transfer_coefficient
+        WHERE name_id = '5' """)
+    for result in sql:
+        print(result[1])
+
+    sql.execute(
+        """SELECT internal, external FROM heat_transfer_coefficient
+        WHERE name_id = '6' """)
+    for result in sql:
+        print(result[1])
