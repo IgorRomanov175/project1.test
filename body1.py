@@ -1,5 +1,5 @@
 from logic1 import *
-# from logicDBN import  *
+from logicDBN import  *
 from db import *
 
 start = int(
