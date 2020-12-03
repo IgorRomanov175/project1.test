@@ -22,98 +22,128 @@ with sq.connect('server.db') as con:
 
     con.commit()
 
-    def heat_transfer_coefficient1():
-        sql.execute(
-            """SELECT internal, external FROM heat_transfer_coefficient 
-            WHERE name_id = 1 """)
-        for result in sql:
-            print(result[0])
-            
-        sql.execute(
-            """SELECT internal, external FROM heat_transfer_coefficient 
-            WHERE name_id = 1 """)
-        for result in sql:
-            print(result[0])
 
-    def heat_transfer_coefficient2():
+    def heat_transfer_coefficient1_1():
+        sql.execute(
+            """SELECT internal, external FROM heat_transfer_coefficient 
+            WHERE name_id = 1 """)
+        for result in sql:
+            return result[1]
+
+    def heat_transfer_coefficient1_2():
+        sql.execute(
+            """SELECT internal, external FROM heat_transfer_coefficient 
+            WHERE name_id = 1 """)
+        for result in sql:
+            return result[0]
+
+    def heat_transfer_coefficient2_1():
         sql.execute(
             """SELECT internal, external FROM heat_transfer_coefficient 
             WHERE name_id = 2 """)
         for result in sql:
-            print(result[1])
-        
+            return result[1]
+
+
+    def heat_transfer_coefficient2_2():
         sql.execute(
             """SELECT internal, external FROM heat_transfer_coefficient 
             WHERE name_id = 2""")
         for result in sql:
-            print(result[0])
+            return result[0]
 
-    def heat_transfer_coefficient3():
+    def heat_transfer_coefficient3_1():
         sql.execute(
             """SELECT internal, external FROM heat_transfer_coefficient
             WHERE name_id = 3 """)
         for result in sql:
-            print(result[1])
-        
+            return result[1]
+
+
+    def heat_transfer_coefficient3_2():
         sql.execute(
             """SELECT internal, external FROM heat_transfer_coefficient
             WHERE name_id = 3 """)
         for result in sql:
-            print(result[0])
+            return result[0]
 
-    def heat_transfer_coefficient4():
+    def heat_transfer_coefficient4_1():
         sql.execute(
             """SELECT internal, external FROM heat_transfer_coefficient
             WHERE name_id = 4 """)
         for result in sql:
-            print(result[1])
-        
+            return result[1]
+
+    def heat_transfer_coefficient4_2():
         sql.execute(
             """SELECT internal, external FROM heat_transfer_coefficient
             WHERE name_id = 4 """)
         for result in sql:
-            print(result[0])
+            return result[0]
 
-    def heat_transfer_coefficient5():
+    def heat_transfer_coefficient5_1():
         sql.execute(
             """SELECT internal, external FROM heat_transfer_coefficient
             WHERE name_id = 6 """)
         for result in sql:
-            print(result[1])
+            return result[1]
 
+
+    def heat_transfer_coefficient5_2():
         sql.execute(
             """SELECT internal, external FROM heat_transfer_coefficient
             WHERE name_id = 6 """)
         for result in sql:
-            print(result[0])
+            return result[0]
 
-    def heat_transfer_coefficient6():
+
+    def heat_transfer_coefficient6_1():
         sql.execute(
             """SELECT internal, external FROM heat_transfer_coefficient
             WHERE name_id = 6 """)
         for result in sql:
-            print(result[1])
+            return result[1]
 
+
+    def heat_transfer_coefficient6_2():
         sql.execute(
             """SELECT internal, external FROM heat_transfer_coefficient
             WHERE name_id = 6 """)
         for result in sql:
-            print(result[0])
+            return result[0]
 
-value1 = heat_transfer_coefficient1()
-print(value1)
+value1_1 = heat_transfer_coefficient1_1()
+# print(value1_1)
 
-value2 = heat_transfer_coefficient2()
-print(value2)
+value1_2 = heat_transfer_coefficient1_2()
+# print(value1_2)
 
-value3 = heat_transfer_coefficient3()
-print(value3)
+value2_1 = heat_transfer_coefficient2_1()
+# print(value2_1)
 
-value4 = heat_transfer_coefficient4()
-print(value4)
+value2_2 = heat_transfer_coefficient2_2()
+# print(value2_2)
 
-value5 = heat_transfer_coefficient5()
-print(value5)
+value3_1 = heat_transfer_coefficient3_1()
+# print(value3_1)
 
-value6 = heat_transfer_coefficient6()
-print(value6)
+value3_2 = heat_transfer_coefficient3_2()
+# print(value3_2)
+
+value4_1 = heat_transfer_coefficient4_1()
+# print(value4_1)
+
+value4_2 = heat_transfer_coefficient4_2()
+# print(value4_2)
+
+value5_1 = heat_transfer_coefficient5_1()
+# print(value5_1)
+
+value5_2 = heat_transfer_coefficient5_2()
+# print(value5_2)
+
+value6_1 = heat_transfer_coefficient6_1()
+# print(value6_1)
+
+value6_2 = heat_transfer_coefficient6_2()
+# print(value6_2)
