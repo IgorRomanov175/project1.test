@@ -3,7 +3,7 @@ from db import *
 
 
 class Menu:
-    def set_action(self, choose_action):
+    def __init__(self, choose_action):
         self.choose_action = choose_action
         if self.choose_action == 1:
             m2_value = int(input("Выберите значение из таблици ДБН: "))
@@ -55,17 +55,17 @@ class Menu:
             try:
                 sql.execute("DROP TABLE users")
             except sq.OperationalError:
-                print("Таблица уже существует")
+                return
 
         if self.choose_action == 3:
             return
 
 
-m1 = Menu()
-x = int(input("""
-Выберите действие:
-1.Продолжить со старой таблицой;
-2.Перезаписать таблицу;
-3.Завершение программы;
-- """))
-m1.set_action(x)
+if __name__ == '__main__':
+    start = int(input("""
+    Выберите действие:
+    1.Продолжить со старой таблицой;
+    2.Перезаписать таблицу;
+    3.Завершение программы;
+    - """))
+    main_body_project = Menu(start)
