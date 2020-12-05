@@ -11,8 +11,6 @@ class Therm1_Math:
 
 class Therm1_Logic:
     def __init__(self, z1, z2):
-        # self.width = x
-        # self.thermal_conductivity = y
         self.z1 = z1
         self.z2 = z2
         self.list = []

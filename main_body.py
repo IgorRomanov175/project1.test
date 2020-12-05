@@ -1,5 +1,5 @@
 from logic1 import *
-from db import *
+from main_body_db import *
 
 
 class Menu:
@@ -40,8 +40,8 @@ class Menu:
 
                 m1.therm_calc(x, y)  # метод для расчёта термического оперения шаров стены
 
-                sql.execute(f"SELECT width FROM users WHERE width = '{x}'")  # выбор столбца для записи данных в таблицу
-                sql.execute("INSERT INTO users VALUES (?, ?, ?)", (None, x, y))  # запись данных в таблицу
+                sql.execute(f"SELECT width FROM thermal_calculation WHERE width = '{x}'")  # выбор столбца для записи данных в таблицу
+                sql.execute("INSERT INTO thermal_calculation VALUES (?, ?, ?)", (None, x, y))  # запись данных в таблицу
                 con.commit()  # подтверждение действий с БД
                 flag = int(input("Добавить расчётный слой?\n-"))  # зацикливание процесса
 

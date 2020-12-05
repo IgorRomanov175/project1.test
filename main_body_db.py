@@ -3,9 +3,9 @@ import sqlite3 as sq
 with sq.connect('server.db') as con:
     sql = con.cursor()
     # con.row_factory = sq.Row
-    # sql.execute("DROP TABLE users")
+    # sql.execute("DROP TABLE thermal_calculation")
 
-    sql.execute(""" CREATE TABLE IF NOT EXISTS users (
+    sql.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation (
                     name_id INTEGER PRIMARY KEY AUTOINCREMENT,
                     width FLOAT,
                     thermal_conductivity FLOAT
