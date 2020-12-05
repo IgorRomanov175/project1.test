@@ -1,6 +1,6 @@
 import sqlite3 as sq
 
-with sq.connect('server.db') as con:
+with sq.connect('main_body.db') as con:
     sql = con.cursor()
     # con.row_factory = sq.Row
     # sql.execute("DROP TABLE thermal_calculation")
@@ -9,7 +9,7 @@ with sq.connect('server.db') as con:
                     name_id INTEGER PRIMARY KEY AUTOINCREMENT,
                     width FLOAT,
                     thermal_conductivity FLOAT
-                    )""")
+                )""")
 
     con.commit()
 

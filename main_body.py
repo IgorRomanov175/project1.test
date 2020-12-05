@@ -1,5 +1,6 @@
 from logic1 import *
 from main_body_db import *
+from result_db import *
 
 
 class Menu:
@@ -40,20 +41,38 @@ class Menu:
 
                 m1.therm_calc(x, y)  # метод для расчёта термического оперения шаров стены
 
-                sql.execute(f"SELECT width FROM thermal_calculation WHERE width = '{x}'")  # выбор столбца для записи данных в таблицу
+                sql.execute(f"SELECT width FROM thermal_calculation "
+                            f"WHERE width = '{x}'")  # выбор столбца для записи данных в таблицу
                 sql.execute("INSERT INTO thermal_calculation VALUES (?, ?, ?)", (None, x, y))  # запись данных в таблицу
                 con.commit()  # подтверждение действий с БД
+
+                sql_result.execute(f"SELECT width FROM thermal_calculation_condition "
+                                   f"WHERE width = '{x}'")  # выбор столбца для записи данных в таблицу
+                sql_result.execute("INSERT INTO thermal_calculation_condition VALUES (?, ?, ?)", (None, x, y))  # запись данных в таблицу
+                con_result.commit()  # подтверждение действий с БД
+
                 flag = int(input("Добавить расчётный слой?\n-"))  # зацикливание процесса
 
             print("Ответ", m1.full_formul_calc())
 
+            sql_result.execute(f"SELECT width FROM thermal_calculation_condition "
+                               f"WHERE width = '{m1.full_formul_calc}'")  # выбор столбца для записи данных в таблицу
+            sql_result.execute("INSERT INTO thermal_calculation_condition VALUES (?, ?)",
+                               (None, m1.full_formul_calc))  # запись данных в таблицу
+            con_result.commit()  # подтверждение действий с БД
+
             con.commit()
+            con_result.commit()
 
             con.close()
+            con_result.close()
 
         if self.choose_action == 2:
             try:
-                sql.execute("DROP TABLE users")
+                sql.execute("DROP TABLE thermal_calculation")
+
+                sql_result("DROP TABLE thermal_calculation_condition")
+
             except sq.OperationalError:
                 return
 
