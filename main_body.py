@@ -54,11 +54,11 @@ class Menu:
                 flag = int(input("Добавить расчётный слой?\n-"))  # зацикливание процесса
 
             print("Ответ", m1.full_formul_calc())
+            ansv = m1.full_formul_calc()
 
             sql_result.execute(f"SELECT width FROM thermal_calculation_condition "
-                               f"WHERE width = '{m1.full_formul_calc}'")  # выбор столбца для записи данных в таблицу
-            sql_result.execute("INSERT INTO thermal_calculation_condition VALUES (?, ?)",
-                               (None, m1.full_formul_calc))  # запись данных в таблицу
+                               f"WHERE width = '{ansv}'")  # выбор столбца для записи данных в таблицу
+            sql_result.execute("INSERT INTO thermal_calculation_result VALUES (?, ?)", (None, ansv))  # запись данных в таблицу
             con_result.commit()  # подтверждение действий с БД
 
             con.commit()
@@ -71,7 +71,9 @@ class Menu:
             try:
                 sql.execute("DROP TABLE thermal_calculation")
 
-                sql_result("DROP TABLE thermal_calculation_condition")
+                sql_result.execute("DROP TABLE thermal_calculation_condition")
+
+                sql_result.execute("DROP TABLE thermal_calculation_result")
 
             except sq.OperationalError:
                 return
