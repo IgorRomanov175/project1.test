@@ -21,6 +21,14 @@ with sq.connect('main_body.db') as con:
 
     con.commit()
 
+    sql.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation_basement_underground (
+                        name_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        width FLOAT,
+                        thermal_conductivity FLOAT
+                    )""")
+
+    con.commit()
+
     sql.execute(""" CREATE TABLE IF NOT EXISTS heat_transfer_coefficient (
                     name_id INTEGER PRIMARY KEY AUTOINCREMENT,
                     name STRING,
