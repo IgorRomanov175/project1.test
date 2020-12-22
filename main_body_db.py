@@ -665,19 +665,19 @@ def linear_heat_transfer_coefficient12_1():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 25 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 150mm
+    2 -- 200mm
+    3 -- 250mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[8]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[10]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[11]
 
 
 def linear_heat_transfer_coefficient12_2():
@@ -686,19 +686,19 @@ def linear_heat_transfer_coefficient12_2():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 26 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 150mm
+    2 -- 200mm
+    3 -- 250mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[8]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[10]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[11]
 
 
 def linear_heat_transfer_coefficient12_3():
@@ -707,19 +707,19 @@ def linear_heat_transfer_coefficient12_3():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 27 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 150mm
+    2 -- 200mm
+    3 -- 250mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[8]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[10]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[11]
 
 
 def linear_heat_transfer_coefficient14():
@@ -791,19 +791,19 @@ def linear_heat_transfer_coefficient4_1():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 31 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 300mm
+    2 -- 400mm
+    3 -- 500mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[12]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[13]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[14]
 
 
 def linear_heat_transfer_coefficient4_2():
@@ -812,19 +812,19 @@ def linear_heat_transfer_coefficient4_2():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 32 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 300mm
+    2 -- 400mm
+    3 -- 500mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[12]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[13]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[14]
 
 
 def linear_heat_transfer_coefficient4_3():
@@ -833,19 +833,19 @@ def linear_heat_transfer_coefficient4_3():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 33 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 300mm
+    2 -- 400mm
+    3 -- 500mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[12]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[13]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[14]
 
 
 def linear_heat_transfer_coefficient7_1():
@@ -854,19 +854,19 @@ def linear_heat_transfer_coefficient7_1():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 34 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 300mm
+    2 -- 400mm
+    3 -- 500mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[12]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[13]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[14]
 
 
 def linear_heat_transfer_coefficient7_2():
@@ -875,19 +875,19 @@ def linear_heat_transfer_coefficient7_2():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 35 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 300mm
+    2 -- 400mm
+    3 -- 500mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[12]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[13]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[14]
 
 
 def linear_heat_transfer_coefficient7_3():
@@ -896,19 +896,19 @@ def linear_heat_transfer_coefficient7_3():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 36 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 300mm
+    2 -- 400mm
+    3 -- 500mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[12]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[13]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[14]
 
 
 def linear_heat_transfer_coefficient10_1():
@@ -917,19 +917,19 @@ def linear_heat_transfer_coefficient10_1():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 37 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 300mm
+    2 -- 400mm
+    3 -- 500mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[12]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[13]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[14]
 
 
 def linear_heat_transfer_coefficient10_2():
@@ -938,19 +938,19 @@ def linear_heat_transfer_coefficient10_2():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 38 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 300mm
+    2 -- 400mm
+    3 -- 500mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[12]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[13]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[14]
 
 
 def linear_heat_transfer_coefficient10_3():
@@ -959,19 +959,19 @@ def linear_heat_transfer_coefficient10_3():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 39 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 300mm
+    2 -- 400mm
+    3 -- 500mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[12]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[13]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[14]
 
 
 def linear_heat_transfer_coefficient13_1():
@@ -980,19 +980,19 @@ def linear_heat_transfer_coefficient13_1():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 40 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 300mm
+    2 -- 400mm
+    3 -- 500mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[12]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[13]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[14]
 
 
 def linear_heat_transfer_coefficient13_2():
@@ -1001,19 +1001,19 @@ def linear_heat_transfer_coefficient13_2():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 41 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 300mm
+    2 -- 400mm
+    3 -- 500mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[12]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[13]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[14]
 
 
 def linear_heat_transfer_coefficient13_3():
@@ -1022,19 +1022,19 @@ def linear_heat_transfer_coefficient13_3():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 42 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 300mm
+    2 -- 400mm
+    3 -- 500mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[12]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[13]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[14]
 
 
 def linear_heat_transfer_coefficient17():
@@ -1043,19 +1043,19 @@ def linear_heat_transfer_coefficient17():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 43 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 150mm
+    2 -- 200mm
+    3 -- 250mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[8]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[10]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[11]
 
 
 def linear_heat_transfer_coefficient18():
@@ -1064,19 +1064,19 @@ def linear_heat_transfer_coefficient18():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 44 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 150mm
+    2 -- 200mm
+    3 -- 250mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[8]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[10]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[11]
 
 
 def linear_heat_transfer_coefficient19():
@@ -1085,19 +1085,19 @@ def linear_heat_transfer_coefficient19():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 45 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 150mm
+    2 -- 200mm
+    3 -- 250mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[8]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[10]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[11]
 
 
 def linear_heat_transfer_coefficient20():
@@ -1106,19 +1106,19 @@ def linear_heat_transfer_coefficient20():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 46 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 300mm
+    2 -- 400mm
+    3 -- 500mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[12]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[13]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[14]
 
 
 def linear_heat_transfer_coefficient21():
@@ -1127,19 +1127,19 @@ def linear_heat_transfer_coefficient21():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 47 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 300mm
+    2 -- 400mm
+    3 -- 500mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[12]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[13]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[14]
 
 
 def linear_heat_transfer_coefficient22():
@@ -1148,19 +1148,19 @@ def linear_heat_transfer_coefficient22():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 48 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 300mm
+    2 -- 400mm
+    3 -- 500mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[12]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[13]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[14]
 
 
 def linear_heat_transfer_coefficient23():
@@ -1190,19 +1190,19 @@ def linear_heat_transfer_coefficient24():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 50 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 150mm
+    2 -- 200mm
+    3 -- 250mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[8]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[10]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[11]
 
 
 def linear_heat_transfer_coefficient25():
@@ -1211,19 +1211,19 @@ def linear_heat_transfer_coefficient25():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 51 """)
     res = int(input("""
-    1 -- 120mm
-    2 -- 150mm
-    3 -- 180mm
+    1 -- 150mm
+    2 -- 200mm
+    3 -- 250mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[8]
     if res == 2:
         for result in sql:
-            return result[8]
+            return result[10]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[11]
 
 
 def linear_heat_transfer_coefficient26():
@@ -1232,19 +1232,19 @@ def linear_heat_transfer_coefficient26():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 52 """)
     res = int(input("""
-    1 -- 120mm
+    1 -- 100mm
     2 -- 150mm
-    3 -- 180mm
+    3 -- 200mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[6]
     if res == 2:
         for result in sql:
             return result[8]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[10]
 
 
 def linear_heat_transfer_coefficient27():
@@ -1253,19 +1253,19 @@ def linear_heat_transfer_coefficient27():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 53 """)
     res = int(input("""
-    1 -- 120mm
+    1 -- 100mm
     2 -- 150mm
-    3 -- 180mm
+    3 -- 200mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[6]
     if res == 2:
         for result in sql:
             return result[8]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[10]
 
 
 def linear_heat_transfer_coefficient28():
@@ -1274,19 +1274,19 @@ def linear_heat_transfer_coefficient28():
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 54 """)
     res = int(input("""
-    1 -- 120mm
+    1 -- 100mm
     2 -- 150mm
-    3 -- 180mm
+    3 -- 200mm
     -"""))
     if res == 1:
         for result in sql:
-            return result[7]
+            return result[6]
     if res == 2:
         for result in sql:
             return result[8]
     if res == 3:
         for result in sql:
-            return result[9]
+            return result[10]
 
 
 def linear_heat_transfer_coefficient29():
@@ -1294,6 +1294,168 @@ def linear_heat_transfer_coefficient29():
         """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
          mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
          WHERE name_id = 55 """)
+    res = int(input("""
+    1 -- 100mm
+    2 -- 150mm
+    3 -- 200mm
+    -"""))
+    if res == 1:
+        for result in sql:
+            return result[6]
+    if res == 2:
+        for result in sql:
+            return result[8]
+    if res == 3:
+        for result in sql:
+            return result[10]
+
+
+def linear_heat_transfer_coefficient30_1():
+    sql.execute(
+        """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
+         mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
+         WHERE name_id = 56 """)
+    res = int(input("""
+    1 -- 30mm
+    2 -- 50mm
+    3 -- 80mm
+    -"""))
+    if res == 1:
+        for result in sql:
+            return result[3]
+    if res == 2:
+        for result in sql:
+            return result[4]
+    if res == 3:
+        for result in sql:
+            return result[5]
+
+
+def linear_heat_transfer_coefficient30_2():
+    sql.execute(
+        """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
+         mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
+         WHERE name_id = 57 """)
+    res = int(input("""
+    1 -- 30mm
+    2 -- 50mm
+    3 -- 80mm
+    -"""))
+    if res == 1:
+        for result in sql:
+            return result[3]
+    if res == 2:
+        for result in sql:
+            return result[4]
+    if res == 3:
+        for result in sql:
+            return result[5]
+
+
+def linear_heat_transfer_coefficient30_3():
+    sql.execute(
+        """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
+         mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
+         WHERE name_id = 58 """)
+    res = int(input("""
+    1 -- 30mm
+    2 -- 50mm
+    3 -- 80mm
+    -"""))
+    if res == 1:
+        for result in sql:
+            return result[3]
+    if res == 2:
+        for result in sql:
+            return result[4]
+    if res == 3:
+        for result in sql:
+            return result[5]
+
+
+def linear_heat_transfer_coefficient31():
+    sql.execute(
+        """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
+         mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
+         WHERE name_id = 59 """)
+    res = int(input("""
+    1 -- 100mm
+    2 -- 150mm
+    3 -- 200mm
+    -"""))
+    if res == 1:
+        for result in sql:
+            return result[6]
+    if res == 2:
+        for result in sql:
+            return result[8]
+    if res == 3:
+        for result in sql:
+            return result[10]
+
+
+def linear_heat_transfer_coefficient32():
+    sql.execute(
+        """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
+         mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
+         WHERE name_id = 68 """)
+    res = int(input("""
+    1 -- 30mm
+    2 -- 50mm
+    3 -- 80mm
+    4 -- 100mm
+    5 -- 120mm
+    6 -- 150mm
+    7 -- 180mm
+    8 -- 200mm
+    9 -- 250mm
+    10 -- 300mm
+    11 -- 400mm
+    12 -- 500mm
+    -"""))
+    if res == 1:
+        for result in sql:
+            return result[3]
+    if res == 2:
+        for result in sql:
+            return result[4]
+    if res == 3:
+        for result in sql:
+            return result[5]
+    if res == 3:
+        for result in sql:
+            return result[6]
+    if res == 3:
+        for result in sql:
+            return result[7]
+    if res == 3:
+        for result in sql:
+            return result[8]
+    if res == 3:
+        for result in sql:
+            return result[9]
+    if res == 3:
+        for result in sql:
+            return result[10]
+    if res == 3:
+        for result in sql:
+            return result[11]
+    if res == 3:
+        for result in sql:
+            return result[12]
+    if res == 3:
+        for result in sql:
+            return result[13]
+    if res == 3:
+        for result in sql:
+            return result[14]
+
+
+def linear_heat_transfer_coefficient33():
+    sql.execute(
+        """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
+         mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
+         WHERE name_id = 70 """)
     res = int(input("""
     1 -- 120mm
     2 -- 150mm
@@ -1308,4 +1470,194 @@ def linear_heat_transfer_coefficient29():
     if res == 3:
         for result in sql:
             return result[9]
+
+
+def linear_heat_transfer_coefficient34():
+    sql.execute(
+        """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
+         mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
+         WHERE name_id = 60 """)
+    res = int(input("""
+    1 -- 120mm
+    2 -- 150mm
+    3 -- 180mm
+    -"""))
+    if res == 1:
+        for result in sql:
+            return result[7]
+    if res == 2:
+        for result in sql:
+            return result[8]
+    if res == 3:
+        for result in sql:
+            return result[9]
+
+
+def linear_heat_transfer_coefficient35():
+    sql.execute(
+        """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
+         mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
+         WHERE name_id = 61 """)
+    res = int(input("""
+    1 -- 120mm
+    2 -- 150mm
+    3 -- 180mm
+    -"""))
+    if res == 1:
+        for result in sql:
+            return result[7]
+    if res == 2:
+        for result in sql:
+            return result[8]
+    if res == 3:
+        for result in sql:
+            return result[9]
+
+
+def linear_heat_transfer_coefficient36_1():
+    sql.execute(
+        """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
+         mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
+         WHERE name_id = 62 """)
+    res = int(input("""
+    1 -- 120mm
+    2 -- 150mm
+    3 -- 180mm
+    -"""))
+    if res == 1:
+        for result in sql:
+            return result[7]
+    if res == 2:
+        for result in sql:
+            return result[8]
+    if res == 3:
+        for result in sql:
+            return result[9]
+
+
+def linear_heat_transfer_coefficient36_2():
+    sql.execute(
+        """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
+         mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
+         WHERE name_id = 63 """)
+    res = int(input("""
+    1 -- 120mm
+    2 -- 150mm
+    3 -- 180mm
+    -"""))
+    if res == 1:
+        for result in sql:
+            return result[7]
+    if res == 2:
+        for result in sql:
+            return result[8]
+    if res == 3:
+        for result in sql:
+            return result[9]
+
+
+def linear_heat_transfer_coefficient36_3():
+    sql.execute(
+        """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
+         mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
+         WHERE name_id = 64 """)
+    res = int(input("""
+    1 -- 120mm
+    2 -- 150mm
+    3 -- 180mm
+    -"""))
+    if res == 1:
+        for result in sql:
+            return result[7]
+    if res == 2:
+        for result in sql:
+            return result[8]
+    if res == 3:
+        for result in sql:
+            return result[9]
+
+
+def dot_heat_transfer_coefficient1():
+    sql.execute(
+        """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
+         mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
+         WHERE name_id = 65 """)
+    res = int(input("""
+    1 -- 120mm
+    2 -- 150mm
+    3 -- 180mm
+    -"""))
+    if res == 1:
+        for result in sql:
+            return result[7]
+    if res == 2:
+        for result in sql:
+            return result[8]
+    if res == 3:
+        for result in sql:
+            return result[9]
+
+
+def dot_heat_transfer_coefficient2():
+    sql.execute(
+        """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
+         mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
+         WHERE name_id = 66 """)
+    res = int(input("""
+    1 -- 120mm
+    2 -- 150mm
+    3 -- 180mm
+    -"""))
+    if res == 1:
+        for result in sql:
+            return result[7]
+    if res == 2:
+        for result in sql:
+            return result[8]
+    if res == 3:
+        for result in sql:
+            return result[9]
+
+
+def dot_heat_transfer_coefficient3():
+    sql.execute(
+        """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
+         mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
+         WHERE name_id = 67 """)
+    res = int(input("""
+    1 -- 120mm
+    2 -- 150mm
+    3 -- 180mm
+    -"""))
+    if res == 1:
+        for result in sql:
+            return result[7]
+    if res == 2:
+        for result in sql:
+            return result[8]
+    if res == 3:
+        for result in sql:
+            return result[9]
+
+
+def dot_heat_transfer_coefficient4():
+    sql.execute(
+        """SELECT name, heat_transfer, brand_of_concreete, mm30, mm50, mm80, mm100, mm120, mm150, mm180, 
+         mm200, mm250, mm300, mm400, mm500 FROM linear_heat_transfer_coefficient 
+         WHERE name_id = 69 """)
+    res = int(input("""
+    1 -- 120mm
+    2 -- 150mm
+    3 -- 180mm
+    -"""))
+    if res == 1:
+        for result in sql:
+            return result[7]
+    if res == 2:
+        for result in sql:
+            return result[8]
+    if res == 3:
+        for result in sql:
+            return result[9]
+
 
