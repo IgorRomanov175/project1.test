@@ -9,7 +9,7 @@ with sq.connect('main_body.db') as con:
                     name_id INTEGER PRIMARY KEY AUTOINCREMENT,
                     width FLOAT,
                     thermal_conductivity FLOAT
-                )""")
+                    )""")
 
     con.commit()
 
@@ -17,14 +17,14 @@ with sq.connect('main_body.db') as con:
                     name_id INTEGER PRIMARY KEY AUTOINCREMENT,
                     width FLOAT,
                     thermal_conductivity FLOAT
-                )""")
+                    )""")
 
     con.commit()
 
     sql.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation_basement_underground (
-                        name_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        width FLOAT,
-                        thermal_conductivity FLOAT
+                    name_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    width FLOAT,
+                    thermal_conductivity FLOAT
                     )""")
 
     con.commit()
@@ -38,6 +38,15 @@ with sq.connect('main_body.db') as con:
 
     con.commit()
 
+    sql.execute("""CREATE TABLE IF NOT EXISTS linear_heat_transfer_coefficient (
+                   name_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                   name STRING,
+                   heat_transfer FLOAT,
+                   mm120 FLOAT,
+                   mm150 FLOAT,
+                   mm180 FLOAT
+                   )""")
+    con.commit()
 
     def heat_transfer_coefficient1_1():
         sql.execute(

@@ -33,3 +33,37 @@ with sq.connect('result.db') as con_result:
                            )""")
 
     con_result.commit()
+
+
+def thermal_calculation_condition_inside_wall():
+    sql_result.execute(
+        """SELECT thermal_calculation_result FROM thermal_calculation_result
+        WHERE name_id = 1 """)
+    for result in sql_result:
+        return result[0]
+
+
+def thermal_calculation_condition_inside_wall_zero():
+    sql_result.execute(
+        """SELECT thermal_calculation_result FROM thermal_calculation_result
+        WHERE name_id = 2 """)
+    for result in sql_result:
+        return result[0]
+
+
+def thermal_calculation_condition_basement_underground():
+    sql_result.execute(
+        """SELECT thermal_calculation_result FROM thermal_calculation_result
+        WHERE name_id = 3 """)
+    for result in sql_result:
+        return result[0]
+
+
+value1_1 = thermal_calculation_condition_inside_wall()
+print(value1_1)
+
+value1_2 = thermal_calculation_condition_inside_wall_zero()
+print(value1_2)
+
+value1_3 = thermal_calculation_condition_basement_underground()
+print(value1_3)
