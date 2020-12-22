@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09082d89-cd07-4806-b7bd-cd5050c5f027" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project1.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project1.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body.db" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_body.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result.db" beforeDir="false" afterPath="$PROJECT_DIR$/result.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_db.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
