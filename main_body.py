@@ -5,9 +5,10 @@ class MainMenu:
     def __init__(self, choose_action):
         self.choose_action = choose_action
         if choose_action == 1:
-            thermal_calculation_inside_wall()
-            thermal_calculation_inside_wall_zero()
-            thermal_calculation_basement_underground()
+            # thermal_calculation_inside_wall()
+            # thermal_calculation_inside_wall_zero()
+            # thermal_calculation_basement_underground()
+            heat_transfer_resistance_of_external_walls()
 
             con.commit()
             con_result.commit()

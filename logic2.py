@@ -15,7 +15,6 @@ class Therm2_Logic:
     def heat_trans_res(self):
         return self.z_zero
 
-
     def full_therm2_calc(self):
         new_formul_calc = self.heat_trans_res()
         for i in self.list:
