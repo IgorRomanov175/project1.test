@@ -38,26 +38,6 @@ with sq.connect('main_body.db') as con:
 
     con.commit()
 
-    sql.execute("""CREATE TABLE IF NOT EXISTS linear_heat_transfer_coefficient (
-                   name_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                   name	STRING,
-                   heat_transfer FLOAT,
-                   brand_of_concreete TEXT,
-                   mm30 FLOAT,
-                   mm50 FLOAT,
-                   mm80 FLOAT,
-                   mm100 FLOAT,
-                   mm120 FLOAT,
-                   mm150 FLOAT,
-                   mm180 FLOAT,
-                   mm200 FLOAT,
-                   mm250 FLOAT,
-                   mm300 FLOAT,
-                   mm400 FLOAT,
-                   mm500 FLOAT
-                   )""")
-    con.commit()
-
 
     def heat_transfer_coefficient1_1():
         sql.execute(
@@ -126,7 +106,7 @@ with sq.connect('main_body.db') as con:
     def heat_transfer_coefficient5_1():
         sql.execute(
             """SELECT internal, external FROM heat_transfer_coefficient
-            WHERE name_id = 6 """)
+            WHERE name_id = 5 """)
         for result in sql:
             return result[1]
 
@@ -134,7 +114,7 @@ with sq.connect('main_body.db') as con:
     def heat_transfer_coefficient5_2():
         sql.execute(
             """SELECT internal, external FROM heat_transfer_coefficient
-            WHERE name_id = 6 """)
+            WHERE name_id = 5 """)
         for result in sql:
             return result[0]
 

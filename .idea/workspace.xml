@@ -2,13 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09082d89-cd07-4806-b7bd-cd5050c5f027" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/linar_heat_transfer_coefficient.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logic3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/array/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logic/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logic/logic3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project1.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project1.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic2.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linar_heat_transfer_coefficient.py" beforeDir="false" afterPath="$PROJECT_DIR$/array/linar_heat_transfer_coefficient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic1.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic/logic1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic2.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic/logic2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic3.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body.db" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_body_GUI.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_body_GUI2.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_body_gui.ui" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.db" beforeDir="false" afterPath="$PROJECT_DIR$/result.db" afterDir="false" />
     </list>
@@ -53,6 +62,12 @@
       </console-settings>
     </option>
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Python_project\project1.test\array" />
+      <recent name="C:\Python_project\project1.test\logic" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.main_body">
     <configuration name="linar_heat_transfer_coefficient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="project1.test" />
@@ -66,7 +81,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/linar_heat_transfer_coefficient.py" />
+      <option name="SCRIPT_NAME" value="C:\Python_project\project1.test\array\linar_heat_transfer_coefficient.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -138,7 +153,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="result_db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main_body_logic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="project1.test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -150,7 +165,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/result_db.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_body_logic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -162,10 +177,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main_body" />
-        <item itemvalue="Python.main_body_GUI2" />
-        <item itemvalue="Python.linar_heat_transfer_coefficient" />
         <item itemvalue="Python.main_body_db" />
-        <item itemvalue="Python.result_db" />
+        <item itemvalue="Python.main_body_logic" />
+        <item itemvalue="Python.linar_heat_transfer_coefficient" />
+        <item itemvalue="Python.main_body_GUI2" />
       </list>
     </recent_temporary>
   </component>
