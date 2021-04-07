@@ -1,38 +1,15 @@
+from array1.linar_heat_transfer_coefficient import *
 from logic.logic1 import *
 from logic.logic2 import *
 from logic.logic3 import *
-from result_db import *
-from main_body_db import *
-from array.linar_heat_transfer_coefficient import *
+from main_body_logic1_db import *
 
 
 def thermal_calculation_inside_wall():
     print("Теплотехнічний розрахунок зовнішньої стіни")
 
-    m2_value = int(input("Выберите значение из таблици ДБН: "))
-    if m2_value == 1:
-        z1 = heat_transfer_coefficient1_1()
-        z2 = heat_transfer_coefficient1_2()
-
-    if m2_value == 2:
-        z1 = heat_transfer_coefficient2_1()
-        z2 = heat_transfer_coefficient2_2()
-
-    if m2_value == 3:
-        z1 = heat_transfer_coefficient3_1()
-        z2 = heat_transfer_coefficient3_2()
-
-    if m2_value == 4:
-        z1 = heat_transfer_coefficient4_1()
-        z2 = heat_transfer_coefficient4_2()
-
-    if m2_value == 5:
-        z1 = heat_transfer_coefficient5_1()
-        z2 = heat_transfer_coefficient5_2()
-
-    if m2_value == 6:
-        z1 = heat_transfer_coefficient6_1()
-        z2 = heat_transfer_coefficient6_2()
+    z1 = heat_transfer_coefficient1_1()
+    z2 = heat_transfer_coefficient1_2()
 
     m1 = Therm1_Logic(z1, z2)  # создание объекта для расчёта термического оперения шаров стены
 
@@ -43,57 +20,23 @@ def thermal_calculation_inside_wall():
 
         m1.therm_calc(x, y)  # метод для расчёта термического оперения шаров стены
 
-        sql.execute(f"SELECT width FROM thermal_calculation_inside_wall "
-                    f"WHERE width = '{x}'")  # выбор столбца для записи данных в таблицу
-        sql.execute("INSERT INTO thermal_calculation_inside_wall VALUES (?, ?, ?)",
-                    (None, x, y))  # запись данных в таблицу
-        con.commit()  # подтверждение действий с БД
-
-        sql_result.execute(f"SELECT width FROM thermal_calculation_condition_inside_wall "
-                           f"WHERE width = '{x}'")  # выбор столбца для записи данных в таблицу
-        sql_result.execute("INSERT INTO thermal_calculation_condition_inside_wall VALUES (?, ?, ?)",
-                           (None, x, y))  # запись данных в таблицу
-        con_result.commit()  # подтверждение действий с БД
+        data_dase_1_1(x, y)
 
         flag = int(input("Добавить расчётный слой?\n-"))  # зацикливание процесса
 
     print("Ответ", m1.full_formul_calc())
     ans = m1.full_formul_calc()
 
-    sql_result.execute(f"SELECT width FROM thermal_calculation_condition_inside_wall "
-                       f"WHERE width = '{ans}'")  # выбор столбца для записи данных в таблицу
-    sql_result.execute("INSERT INTO thermal_calculation_result VALUES (?, ?)",
-                       (None, ans))  # запись данных в таблицу
-    con_result.commit()  # подтверждение действий с БД
+    data_base_1_2(ans)
 
+
+# -----------------------------------------------------------------------------------------------------------------------
 
 def thermal_calculation_inside_wall_zero():
     print("Теплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00")
 
-    m2_value = int(input("Выберите значение из таблици ДБН: "))
-    if m2_value == 1:
-        z1 = heat_transfer_coefficient1_1()
-        z2 = heat_transfer_coefficient1_2()
-
-    if m2_value == 2:
-        z1 = heat_transfer_coefficient2_1()
-        z2 = heat_transfer_coefficient2_2()
-
-    if m2_value == 3:
-        z1 = heat_transfer_coefficient3_1()
-        z2 = heat_transfer_coefficient3_2()
-
-    if m2_value == 4:
-        z1 = heat_transfer_coefficient4_1()
-        z2 = heat_transfer_coefficient4_2()
-
-    if m2_value == 5:
-        z1 = heat_transfer_coefficient5_1()
-        z2 = heat_transfer_coefficient5_2()
-
-    if m2_value == 6:
-        z1 = heat_transfer_coefficient6_1()
-        z2 = heat_transfer_coefficient6_2()
+    z1 = heat_transfer_coefficient2_1()
+    z2 = heat_transfer_coefficient2_2()
 
     m2 = Therm1_Logic(z1, z2)  # создание объекта для расчёта термического оперения шаров стены
 
@@ -104,31 +47,17 @@ def thermal_calculation_inside_wall_zero():
 
         m2.therm_calc(x, y)  # метод для расчёта термического оперения шаров стены
 
-        sql.execute(f"SELECT width FROM thermal_calculation_inside_wall_zero WHERE width = '{x}'")
-        # выбор столбца для записи данных в таблицу
-        sql.execute("INSERT INTO thermal_calculation_inside_wall_zero VALUES (?, ?, ?)",
-                    (None, x, y))  # запись данных в таблицу
-        con.commit()  # подтверждение действий с БД
-
-        sql_result.execute(
-            f"SELECT width FROM thermal_calculation_condition_inside_wall_zero WHERE width = '{x}'")
-        # выбор столбца для записи данных в таблицу
-        sql_result.execute("INSERT INTO thermal_calculation_condition_inside_wall_zero VALUES (?, ?, ?)",
-                           (None, x, y))  # запись данных в таблицу
-        con_result.commit()  # подтверждение действий с БД
+        data_base_2_1(x, y)
 
         flag = int(input("Добавить расчётный слой?\n-"))  # зацикливание процесса
 
     print("Ответ", m2.full_formul_calc())
     ans = m2.full_formul_calc()
 
-    sql_result.execute(
-        f"SELECT width FROM thermal_calculation_condition_inside_wall_zero WHERE width = '{ans}'")
-    # выбор столбца для записи данных в таблицу
-    sql_result.execute("INSERT INTO thermal_calculation_result VALUES (?, ?)",
-                       (None, ans))  # запись данных в таблицу
-    con_result.commit()  # подтверждение действий с БД
+    data_base_2_2(ans)
 
+
+# -----------------------------------------------------------------------------------------------------------------------
 
 def thermal_calculation_basement_underground():
     print("Теплотехнічний розрахунок стін підвалу нижче поверхні землі")
@@ -154,47 +83,32 @@ def thermal_calculation_basement_underground():
 
         m3.therm2_calc(x, y)
 
-        sql.execute(
-            f"SELECT width FROM thermal_calculation_basement_underground WHERE width = '{x}'")
-        # выбор столбца для записи данных в таблицу
-        sql.execute("INSERT INTO thermal_calculation_basement_underground VALUES (?, ?, ?)",
-                    (None, x, y))  # запись данных в таблицу
-        con.commit()  # подтверждение действий с БД
-
-        sql_result.execute(
-            f"SELECT width FROM thermal_calculation_condition_basement_underground WHERE width = '{x}'")
-        # выбор столбца для записи данных в таблицу
-        sql_result.execute("INSERT INTO thermal_calculation_condition_basement_underground VALUES (?, ?, ?)",
-                           (None, x, y))  # запись данных в таблицу
-        con_result.commit()  # подтверждение действий с БД
+        data_base_3_1(x, y)
 
         flag = int(input("Добавить расчётный слой?\n-"))  # зацикливание процесса
 
     print("Ответ", m3.full_therm2_calc())
     ans = m3.full_therm2_calc()
 
-    sql_result.execute(
-        f"SELECT width FROM thermal_calculation_condition_inside_wall_zero WHERE width = '{ans}'")
-    # выбор столбца для записи данных в таблицу
-    sql_result.execute("INSERT INTO thermal_calculation_result VALUES (?, ?)",
-                       (None, ans))  # запись данных в таблицу
-    con_result.commit()  # подтверждение действий с БД
+    data_base_3_2(ans)
 
+
+# -----------------------------------------------------------------------------------------------------------------------
 
 def heat_transfer_resistance_of_external_walls():
     print("\nРозрахунок приведеного опору теплопередачі зовнішніх стін\n")
     calc_area1 = float(input("Площа зовнішніх стін: "))
-    calc_val1 = input("\nТеплотехнічний розрахунок зовнішньої стіни: ")
+    # calc_val1 = input("\nТеплотехнічний розрахунок зовнішньої стіни: ")
     calc_values1 = float(thermal_calculation_condition_inside_wall())
     print(calc_values1)
 
     calc_area2 = float(input("\nПлоща зовнішніх стін нижче відмітки 0.00: "))
-    calc_val2 = input("\nТеплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00: ")
+    # calc_val2 = input("\nТеплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00: ")
     calc_values2 = float(thermal_calculation_condition_inside_wall_zero())
     print(calc_values2)
 
     calc_area3 = float(input("\nПлоща стін підвалу нижче поверхні землі: "))
-    calc_val3 = input("\nТеплотехнічний розрахунок стін підвалу нижче поверхні землі: ")
+    # calc_val3 = input("\nТеплотехнічний розрахунок стін підвалу нижче поверхні землі: ")
     calc_values3 = float(thermal_calculation_condition_basement_underground())
     print(calc_values3)
 

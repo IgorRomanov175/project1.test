@@ -1,4 +1,5 @@
-from main_body_logic import *
+from main_body_logic1 import *
+from main_body_logic2 import *
 
 
 class MainMenu:
@@ -9,6 +10,8 @@ class MainMenu:
             thermal_calculation_inside_wall_zero()
             thermal_calculation_basement_underground()
             heat_transfer_resistance_of_external_walls()
+
+            thermal_calculation_of_the_attic_floor()
 
             con.commit()
             con_result.commit()
@@ -25,7 +28,7 @@ class MainMenu:
             sql_result.execute("DROP TABLE thermal_calculation_condition_inside_wall_zero")
             sql_result.execute("DROP TABLE thermal_calculation_condition_basement_underground")
 
-            sql_result.execute("DROP TABLE thermal_calculation_result")
+            sql_result.execute("DROP TABLE thermal_calculation_result_1_1")
 
         if self.choose_action == 3:
             return
