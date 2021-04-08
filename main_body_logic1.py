@@ -1,96 +1,26 @@
-from array1.linar_heat_transfer_coefficient import *
-from logic.logic1 import *
-from logic.logic2 import *
-from logic.logic3 import *
-from main_body_logic1_db import *
+from main_body_logic_template import *
 
 
 def thermal_calculation_inside_wall():
-    print("Теплотехнічний розрахунок зовнішньої стіни")
+    thermal_calculation_template_1(
+        x1="Теплотехнічний розрахунок зовнішніх стін",
+        x2=heat_transfer_coefficient1_1(),
+        x3=heat_transfer_coefficient1_2()
+    )
 
-    z1 = heat_transfer_coefficient1_1()
-    z2 = heat_transfer_coefficient1_2()
-
-    m1 = Therm1_Logic(z1, z2)  # создание объекта для расчёта термического оперения шаров стены
-
-    flag = int(input("Добавить расчётный слой?\n1 - ДА;\n2 - НЕТ;\n-"))  # запуск цикла с сбором информации
-    while flag == 1:  # создание цикла
-        x = float(input("Толщина: "))  # сбор данных: толщина и теплопроводимость
-        y = float(input("Теплопроводимость: "))
-
-        m1.therm_calc(x, y)  # метод для расчёта термического оперения шаров стены
-
-        data_dase_1_1(x, y)
-
-        flag = int(input("Добавить расчётный слой?\n-"))  # зацикливание процесса
-
-    print("Ответ", m1.full_formul_calc())
-    ans = m1.full_formul_calc()
-
-    data_base_1_2(ans)
-
-
-# -----------------------------------------------------------------------------------------------------------------------
 
 def thermal_calculation_inside_wall_zero():
-    print("Теплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00")
+    thermal_calculation_template_1(
+        x1="Теплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00",
+        x2=heat_transfer_coefficient2_1(),
+        x3=heat_transfer_coefficient2_2()
+    )
 
-    z1 = heat_transfer_coefficient2_1()
-    z2 = heat_transfer_coefficient2_2()
-
-    m2 = Therm1_Logic(z1, z2)  # создание объекта для расчёта термического оперения шаров стены
-
-    flag = int(input("Добавить расчётный слой?\n1 - ДА;\n2 - НЕТ;\n-"))  # запуск цикла с сбором информации
-    while flag == 1:  # создание цикла
-        x = float(input("Толщина: "))  # сбор данных: толщина и теплопроводимость
-        y = float(input("Теплопроводимость: "))
-
-        m2.therm_calc(x, y)  # метод для расчёта термического оперения шаров стены
-
-        data_base_2_1(x, y)
-
-        flag = int(input("Добавить расчётный слой?\n-"))  # зацикливание процесса
-
-    print("Ответ", m2.full_formul_calc())
-    ans = m2.full_formul_calc()
-
-    data_base_2_2(ans)
-
-
-# -----------------------------------------------------------------------------------------------------------------------
 
 def thermal_calculation_basement_underground():
-    print("Теплотехнічний розрахунок стін підвалу нижче поверхні землі")
-    m2_value = int(input("Оберіть зону опору теплопередачі: "))
-    if m2_value == 1:
-        z_zero = 2.1
-
-    if m2_value == 2:
-        z_zero = 4.3
-
-    if m2_value == 3:
-        z_zero = 8.6
-
-    if m2_value == 4:
-        z_zero = 14.2
-
-    m3 = Therm2_Logic(z_zero)
-
-    flag = int(input("Добавить расчётный слой?\n1 - ДА;\n2 - НЕТ;\n-"))  # запуск цикла с сбором информации
-    while flag == 1:  # создание цикла
-        x = float(input("Толщина: "))  # сбор данных: толщина и теплопроводимость
-        y = float(input("Теплопроводимость: "))
-
-        m3.therm2_calc(x, y)
-
-        data_base_3_1(x, y)
-
-        flag = int(input("Добавить расчётный слой?\n-"))  # зацикливание процесса
-
-    print("Ответ", m3.full_therm2_calc())
-    ans = m3.full_therm2_calc()
-
-    data_base_3_2(ans)
+    thermal_calculation_template_2(
+        x1="Теплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00",
+    )
 
 
 # -----------------------------------------------------------------------------------------------------------------------
