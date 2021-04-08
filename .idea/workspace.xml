@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09082d89-cd07-4806-b7bd-cd5050c5f027" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main_body_logic_template.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body.db" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_body.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_body_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_logic1.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_body_logic1_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_body_logic2.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_body_logic_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic_template.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.db" beforeDir="false" afterPath="$PROJECT_DIR$/result.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_db.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617830460560</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="reworking logic system">
+      <created>1617875510901</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617875510901</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -206,6 +218,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="reworking data base system&#10;add new calculation block" />
-    <option name="LAST_COMMIT_MESSAGE" value="reworking data base system&#10;add new calculation block" />
+    <MESSAGE value="reworking logic system" />
+    <option name="LAST_COMMIT_MESSAGE" value="reworking logic system" />
   </component>
 </project>

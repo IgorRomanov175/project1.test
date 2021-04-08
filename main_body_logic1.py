@@ -1,6 +1,9 @@
 from main_body_logic_template import *
+from logic.logic3 import *
+from array1.linar_heat_transfer_coefficient import *
 
 
+# пункт 3.1.1
 def thermal_calculation_inside_wall():
     thermal_calculation_template_1(
         x1="Теплотехнічний розрахунок зовнішніх стін",
@@ -9,6 +12,7 @@ def thermal_calculation_inside_wall():
     )
 
 
+# пункт 3.1.2
 def thermal_calculation_inside_wall_zero():
     thermal_calculation_template_1(
         x1="Теплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00",
@@ -17,14 +21,16 @@ def thermal_calculation_inside_wall_zero():
     )
 
 
+# пункт 3.1.3
 def thermal_calculation_basement_underground():
     thermal_calculation_template_2(
-        x1="Теплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00",
+        x1="Теплотехнічний розрахунок стін підвалу нижче поверхні землі",
     )
 
 
 # -----------------------------------------------------------------------------------------------------------------------
 
+# пункт 3.1.4
 def heat_transfer_resistance_of_external_walls():
     print("\nРозрахунок приведеного опору теплопередачі зовнішніх стін\n")
     calc_area1 = float(input("Площа зовнішніх стін: "))

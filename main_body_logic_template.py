@@ -1,6 +1,6 @@
 from logic.logic1 import *
 from logic.logic2 import *
-from main_body_logic1_db import *
+from main_body_logic_db import *
 
 
 def thermal_calculation_template_1(x1, x2, x3):
@@ -22,6 +22,10 @@ def thermal_calculation_template_1(x1, x2, x3):
             data_dase_1_1(x, y)
         elif x1 == "Теплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00":
             data_base_2_1(x, y)
+        elif x1 == "Теплотехнічний розрахунок горищного покриття":
+            data_base_3_1(x, y)
+        elif x1 == "Теплотехнічний розрахунок над підвалом та техпідпіллям":
+            data_base_4_1(x, y)
         else:
             print("Помилка")
             return
@@ -35,6 +39,10 @@ def thermal_calculation_template_1(x1, x2, x3):
         data_base_1_2(ans)
     elif x1 == "Теплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00":
         data_base_2_2(ans)
+    elif x1 == "Теплотехнічний розрахунок горищного покриття":
+        data_base_3_2(ans)
+    elif x1 == "Теплотехнічний розрахунок над підвалом та техпідпіллям":
+        data_base_4_2(ans)
     else:
         print("Помилка")
         return
@@ -66,6 +74,11 @@ def thermal_calculation_template_2(x1):
 
         if x1 == "Теплотехнічний розрахунок стін підвалу нижче поверхні землі":
             data_base_3_1(x, y)
+        elif x1 == "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту)":
+            data_base_5_1(x, y)
+        else:
+            print("Помилка")
+            return
 
         flag = int(input("Добавить расчётный слой?\n-"))  # зацикливание процесса
 
@@ -74,3 +87,8 @@ def thermal_calculation_template_2(x1):
 
     if x1 == "Теплотехнічний розрахунок стін підвалу нижче поверхні землі":
         data_base_3_2(ans)
+    elif x1 == "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту)":
+        data_base_5_2(ans)
+    else:
+        print("Помилка")
+        return

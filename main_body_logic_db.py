@@ -50,7 +50,7 @@ def data_base_2_2(ans):
     con_result.commit()  # подтверждение действий с БД
 
 
-# -----------------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------
 
 def data_base_3_1(x, y):
     sql.execute(
@@ -73,5 +73,55 @@ def data_base_3_2(ans):
         f"SELECT width FROM thermal_calculation_condition_inside_wall_zero WHERE width = '{ans}'")
     # выбор столбца для записи данных в таблицу
     sql_result.execute("INSERT INTO thermal_calculation_result_1_1 VALUES (?, ?)",
+                       (None, ans))  # запись данных в таблицу
+    con_result.commit()  # подтверждение действий с БД
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+
+def data_base_4_1(x, y):
+    sql.execute(f"SELECT width FROM thermal_calculation_overlap_over_the_underground WHERE width = '{x}'")
+    # выбор столбца для записи данных в таблицу
+    sql.execute("INSERT INTO thermal_calculation_overlap_over_the_underground VALUES (?, ?, ?)",
+                (None, x, y))  # запись данных в таблицу
+    con.commit()  # подтверждение действий с БД
+
+    sql_result.execute(
+        f"SELECT width FROM thermal_calculation_condition_overlap_over_the_underground WHERE width = '{x}'")
+    # выбор столбца для записи данных в таблицу
+    sql_result.execute("INSERT INTO thermal_calculation_condition_overlap_over_the_underground VALUES (?, ?, ?)",
+                       (None, x, y))  # запись данных в таблицу
+    con_result.commit()  # подтверждение действий с БД
+
+
+def data_base_4_2(ans):
+    sql_result.execute(f"SELECT width FROM thermal_calculation_condition_overlap_over_the_underground "
+                       f"WHERE width = '{ans}'")  # выбор столбца для записи данных в таблицу
+    sql_result.execute("INSERT INTO thermal_calculation_result_1_2 VALUES (?, ?)",
+                       (None, ans))  # запись данных в таблицу
+    con_result.commit()  # подтверждение действий с БД
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+
+def data_base_5_1(x, y):
+    sql.execute(f"SELECT width FROM thermal_calculation_of_the_basement_floor WHERE width = '{x}'")
+    # выбор столбца для записи данных в таблицу
+    sql.execute("INSERT INTO thermal_calculation_of_the_basement_floor VALUES (?, ?, ?)",
+                (None, x, y))  # запись данных в таблицу
+    con.commit()  # подтверждение действий с БД
+
+    sql_result.execute(
+        f"SELECT width FROM thermal_calculation_condition_of_the_basement_floor WHERE width = '{x}'")
+    # выбор столбца для записи данных в таблицу
+    sql_result.execute("INSERT INTO thermal_calculation_condition_of_the_basement_floor VALUES (?, ?, ?)",
+                       (None, x, y))  # запись данных в таблицу
+    con_result.commit()  # подтверждение действий с БД
+
+
+def data_base_5_2(ans):
+    sql_result.execute(f"SELECT width FROM thermal_calculation_condition_of_the_basement_floor "
+                       f"WHERE width = '{ans}'")  # выбор столбца для записи данных в таблицу
+    sql_result.execute("INSERT INTO thermal_calculation_result_1_2 VALUES (?, ?)",
                        (None, ans))  # запись данных в таблицу
     con_result.commit()  # подтверждение действий с БД

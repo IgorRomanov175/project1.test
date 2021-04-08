@@ -12,6 +12,8 @@ class MainMenu:
             heat_transfer_resistance_of_external_walls()
 
             thermal_calculation_of_the_attic_floor()
+            thermal_calculation_overlap_over_the_underground()
+            thermal_calculation_of_the_basement_floor()
 
             con.commit()
             con_result.commit()
@@ -23,12 +25,18 @@ class MainMenu:
             sql.execute("DROP TABLE thermal_calculation_inside_wall")
             sql.execute("DROP TABLE thermal_calculation_inside_wall_zero")
             sql.execute("DROP TABLE thermal_calculation_basement_underground")
+            sql.execute("DROP TABLE thermal_calculation_of_the_attic_floor")
+            sql.execute("DROP TABLE thermal_calculation_overlap_over_the_underground")
 
             sql_result.execute("DROP TABLE thermal_calculation_condition_inside_wall")
             sql_result.execute("DROP TABLE thermal_calculation_condition_inside_wall_zero")
             sql_result.execute("DROP TABLE thermal_calculation_condition_basement_underground")
+            sql_result.execute("DROP TABLE thermal_calculation_condition_of_the_attic_floor")
+            sql_result.execute("DROP TABLE thermal_calculation_condition_overlap_over_the_underground")
+
 
             sql_result.execute("DROP TABLE thermal_calculation_result_1_1")
+            sql_result.execute("DROP TABLE thermal_calculation_result_1_2")
 
         if self.choose_action == 3:
             return

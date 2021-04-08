@@ -39,6 +39,21 @@ with sq.connect('main_body.db') as con:
 
     con.commit()
 
+    sql.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation_overlap_over_the_underground (
+                    name_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    width FLOAT,
+                    thermal_conductivity FLOAT
+                    )""")
+
+    con.commit()
+
+    sql.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation_of_the_basement_floor (
+                    name_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    width FLOAT,
+                    thermal_conductivity FLOAT
+                    )""")
+
+    con.commit()
 
 #-----------------------------------------------------------------------------------------------------------------------
 
