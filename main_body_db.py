@@ -21,11 +21,35 @@ with sq.connect('main_body.db') as con:
 
     con.commit()
 
-    sql.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation_basement_underground (
+    sql.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation_basement_underground_1 (
                     name_id INTEGER PRIMARY KEY AUTOINCREMENT,
                     width FLOAT,
                     thermal_conductivity FLOAT
                     )""")
+
+    con.commit()
+
+    sql.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation_basement_underground_2 (
+                        name_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        width FLOAT,
+                        thermal_conductivity FLOAT
+                        )""")
+
+    con.commit()
+
+    sql.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation_basement_underground_3 (
+                        name_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        width FLOAT,
+                        thermal_conductivity FLOAT
+                        )""")
+
+    con.commit()
+
+    sql.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation_basement_underground_4 (
+                        name_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        width FLOAT,
+                        thermal_conductivity FLOAT
+                        )""")
 
     con.commit()
 
@@ -47,11 +71,35 @@ with sq.connect('main_body.db') as con:
 
     con.commit()
 
-    sql.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation_of_the_basement_floor (
+    sql.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation_of_the_basement_floor_1 (
                     name_id INTEGER PRIMARY KEY AUTOINCREMENT,
                     width FLOAT,
                     thermal_conductivity FLOAT
                     )""")
+
+    con.commit()
+
+    sql.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation_of_the_basement_floor_2 (
+                        name_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        width FLOAT,
+                        thermal_conductivity FLOAT
+                        )""")
+
+    con.commit()
+
+    sql.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation_of_the_basement_floor_3 (
+                        name_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        width FLOAT,
+                        thermal_conductivity FLOAT
+                        )""")
+
+    con.commit()
+
+    sql.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation_of_the_basement_floor_4 (
+                        name_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        width FLOAT,
+                        thermal_conductivity FLOAT
+                        )""")
 
     con.commit()
 

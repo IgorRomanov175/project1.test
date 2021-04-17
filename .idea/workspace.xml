@@ -7,8 +7,8 @@
       <change beforePath="$PROJECT_DIR$/main_body.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_logic1.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_body_logic1_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_logic2.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_body_logic_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_logic_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic_template.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.db" beforeDir="false" afterPath="$PROJECT_DIR$/result.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_db.py" afterDir="false" />
@@ -203,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617875510901</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add new logic block">
+      <created>1617880390797</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617880390797</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -219,6 +226,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="reworking data base system&#10;add new calculation block" />
     <MESSAGE value="reworking logic system" />
-    <option name="LAST_COMMIT_MESSAGE" value="reworking logic system" />
+    <MESSAGE value="add new logic block" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new logic block" />
   </component>
 </project>

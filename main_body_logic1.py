@@ -1,6 +1,6 @@
-from main_body_logic_template import *
-from logic.logic3 import *
 from array1.linar_heat_transfer_coefficient import *
+from logic.logic3 import *
+from main_body_logic_template import *
 
 
 # пункт 3.1.1
@@ -22,9 +22,28 @@ def thermal_calculation_inside_wall_zero():
 
 
 # пункт 3.1.3
-def thermal_calculation_basement_underground():
+
+def thermal_calculation_basement_underground_1():
     thermal_calculation_template_2(
-        x1="Теплотехнічний розрахунок стін підвалу нижче поверхні землі",
+        x1="Теплотехнічний розрахунок стін підвалу нижче поверхні землі для I зони",
+    )
+
+
+def thermal_calculation_basement_underground_2():
+    thermal_calculation_template_2(
+        x1="Теплотехнічний розрахунок стін підвалу нижче поверхні землі для II зони",
+    )
+
+
+def thermal_calculation_basement_underground_3():
+    thermal_calculation_template_2(
+        x1="Теплотехнічний розрахунок стін підвалу нижче поверхні землі для III зони",
+    )
+
+
+def thermal_calculation_basement_underground_4():
+    thermal_calculation_template_2(
+        x1="Теплотехнічний розрахунок стін підвалу нижче поверхні землі для IV зони",
     )
 
 
@@ -34,19 +53,16 @@ def thermal_calculation_basement_underground():
 def heat_transfer_resistance_of_external_walls():
     print("\nРозрахунок приведеного опору теплопередачі зовнішніх стін\n")
     calc_area1 = float(input("Площа зовнішніх стін: "))
-    # calc_val1 = input("\nТеплотехнічний розрахунок зовнішньої стіни: ")
     calc_values1 = float(thermal_calculation_condition_inside_wall())
-    print(calc_values1)
+    print("Розрахунок приведеного опору теплопередачі зовнішніх стін: ", calc_values1)
 
     calc_area2 = float(input("\nПлоща зовнішніх стін нижче відмітки 0.00: "))
-    # calc_val2 = input("\nТеплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00: ")
     calc_values2 = float(thermal_calculation_condition_inside_wall_zero())
-    print(calc_values2)
+    print("Теплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00: ", calc_values2)
 
     calc_area3 = float(input("\nПлоща стін підвалу нижче поверхні землі: "))
-    # calc_val3 = input("\nТеплотехнічний розрахунок стін підвалу нижче поверхні землі: ")
     calc_values3 = float(thermal_calculation_condition_basement_underground())
-    print(calc_values3)
+    print("Теплотехнічний розрахунок стін підвалу нижче поверхні землі: ", calc_values3)
 
     area = calc_area1 + calc_area2 + calc_area3
 

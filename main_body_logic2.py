@@ -20,7 +20,25 @@ def thermal_calculation_overlap_over_the_underground():
 
 
 # пункт 3.4
-def thermal_calculation_of_the_basement_floor():
+def thermal_calculation_of_the_basement_floor_1():
     thermal_calculation_template_2(
-        x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту)"
+        x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для I зони"
+    )
+
+
+def thermal_calculation_of_the_basement_floor_2():
+    thermal_calculation_template_2(
+        x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для II зони"
+    )
+
+
+def thermal_calculation_of_the_basement_floor_3():
+    thermal_calculation_template_2(
+        x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для III зони"
+    )
+
+
+def thermal_calculation_of_the_basement_floor_4():
+    thermal_calculation_template_2(
+        x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для IV зони"
     )
