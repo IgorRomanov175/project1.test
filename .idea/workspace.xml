@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09082d89-cd07-4806-b7bd-cd5050c5f027" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logic/logic3_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_body.db" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_body_logic2.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_body_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_logic_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_logic_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic_template.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.db" beforeDir="false" afterPath="$PROJECT_DIR$/result.db" afterDir="false" />
@@ -216,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618678646857</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add item 3.6 full">
+      <created>1618750903901</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1618750903901</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -234,6 +239,7 @@
     <MESSAGE value="reworking logic system" />
     <MESSAGE value="add new logic block" />
     <MESSAGE value="reworking thermal_calculation_basement_underground" />
-    <option name="LAST_COMMIT_MESSAGE" value="reworking thermal_calculation_basement_underground" />
+    <MESSAGE value="add item 3.6 full" />
+    <option name="LAST_COMMIT_MESSAGE" value="add item 3.6 full" />
   </component>
 </project>

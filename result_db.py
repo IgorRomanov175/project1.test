@@ -116,6 +116,13 @@ with sq.connect('result.db') as con_result:
 
     con_result.commit()
 
+    sql_result.execute(""" CREATE TABLE IF NOT EXISTS thermal_calculation_result_1_3 (
+                               name_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                               thermal_calculation_result FLOAT
+                               )""")
+
+    con_result.commit()
+
 
 # -----------------------------------------------------------------------------------------------------------------------
 
@@ -152,7 +159,7 @@ value1_3 = thermal_calculation_condition_basement_underground()
 
 def thermal_calculation_condition_of_the_basement_floor_1():
     sql_result.execute(
-        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_2
+        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_3
         WHERE name_id = 1 """)
     for result in sql_result:
         return result[0]
@@ -160,7 +167,7 @@ def thermal_calculation_condition_of_the_basement_floor_1():
 
 def thermal_calculation_condition_of_the_basement_floor_2():
     sql_result.execute(
-        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_2
+        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_3
         WHERE name_id = 2 """)
     for result in sql_result:
         return result[0]
@@ -168,7 +175,7 @@ def thermal_calculation_condition_of_the_basement_floor_2():
 
 def thermal_calculation_condition_of_the_basement_floor_3():
     sql_result.execute(
-        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_2
+        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_3
         WHERE name_id = 3 """)
     for result in sql_result:
         return result[0]
@@ -176,7 +183,7 @@ def thermal_calculation_condition_of_the_basement_floor_3():
 
 def thermal_calculation_condition_of_the_basement_floor_4():
     sql_result.execute(
-        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_2
+        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_3
         WHERE name_id = 4 """)
     for result in sql_result:
         return result[0]
