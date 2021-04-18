@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09082d89-cd07-4806-b7bd-cd5050c5f027" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/logic/logic3_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body.db" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_body_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_body_logic1.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_logic2.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_logic_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_logic_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic_template.py" afterDir="false" />
@@ -210,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617880390797</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="reworking thermal_calculation_basement_underground">
+      <created>1618678646857</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1618678646857</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -227,6 +233,7 @@
     <MESSAGE value="reworking data base system&#10;add new calculation block" />
     <MESSAGE value="reworking logic system" />
     <MESSAGE value="add new logic block" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new logic block" />
+    <MESSAGE value="reworking thermal_calculation_basement_underground" />
+    <option name="LAST_COMMIT_MESSAGE" value="reworking thermal_calculation_basement_underground" />
   </component>
 </project>

@@ -6,27 +6,48 @@ class MainMenu:
     def __init__(self, choose_action):
         self.choose_action = choose_action
         if choose_action == 1:
-            thermal_calculation_inside_wall()
-            thermal_calculation_inside_wall_zero()
-            a = int(input("Оберіть зону теплотехнічного розрахунку стін підвалу нижче поверхні землі:"
-                          "1 - I зона"
-                          "2 - II зона"
-                          "3 - III зона"
-                          "4 - IV зона"
-                          "- "))
-            if a == 1:
-                thermal_calculation_basement_underground_1()
-            if a == 2:
-                thermal_calculation_basement_underground_2()
-            if a == 3:
-                thermal_calculation_basement_underground_3()
-            if a == 4:
-                thermal_calculation_basement_underground_4()
-            heat_transfer_resistance_of_external_walls()
+            # thermal_calculation_inside_wall()
+            # thermal_calculation_inside_wall_zero()
+            # a = int(input("Оберіть зону теплотехнічного розрахунку стін підвалу нижче поверхні землі:"
+            #               "1 - I зона"
+            #               "2 - II зона"
+            #               "3 - III зона"
+            #               "4 - IV зона"
+            #               "- "))
+            # if a == 1:
+            #     thermal_calculation_basement_underground_1()
+            # elif a == 2:
+            #     thermal_calculation_basement_underground_2()
+            # elif a == 3:
+            #     thermal_calculation_basement_underground_3()
+            # elif a == 4:
+            #     thermal_calculation_basement_underground_4()
+            # heat_transfer_resistance_of_external_walls()
+            #
+            # thermal_calculation_of_the_attic_floor()
+            # thermal_calculation_overlap_over_the_underground()
+            b = int(input("Додати розрахунок підлоги підвалу?\n1-ТАК\n2-НІ\n-"))
+            while b == 1:
+                c = int(input("Оберіть зону теплотехнічного розрахунку підлоги підвалу (підлоги по грунту):"
+                              "\n1 - I зона"
+                              "\n2 - II зона"
+                              "\n3 - III зона"
+                              "\n4 - IV зона"
+                              "\n5 - Завершити"
+                              "\n- "))
+                if c == 1:
+                    thermal_calculation_of_the_basement_floor_1()
+                elif c == 2:
+                    thermal_calculation_of_the_basement_floor_2()
+                elif c == 3:
+                    thermal_calculation_of_the_basement_floor_3()
+                elif c == 4:
+                    thermal_calculation_of_the_basement_floor_4()
+                else:
+                    break
+            heat_transfer_resistance_of_the_basement_floors()
 
-            thermal_calculation_of_the_attic_floor()
-            thermal_calculation_overlap_over_the_underground()
-            thermal_calculation_of_the_basement_floor()
+
 
             con.commit()
             con_result.commit()
@@ -60,7 +81,6 @@ class MainMenu:
             sql_result.execute("DROP TABLE thermal_calculation_condition_of_the_basement_floor_2")
             sql_result.execute("DROP TABLE thermal_calculation_condition_of_the_basement_floor_3")
             sql_result.execute("DROP TABLE thermal_calculation_condition_of_the_basement_floor_4")
-
 
             sql_result.execute("DROP TABLE thermal_calculation_result_1_1")
             sql_result.execute("DROP TABLE thermal_calculation_result_1_2")
