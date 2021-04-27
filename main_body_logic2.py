@@ -7,7 +7,8 @@ def thermal_calculation_of_the_attic_floor():
     thermal_calculation_template_1(
         x1="Теплотехнічний розрахунок горищного покриття",
         x2=heat_transfer_coefficient3_1(),
-        x3=heat_transfer_coefficient3_2()
+        x3=heat_transfer_coefficient3_2(),
+        x4="thermal_calculation_of_the_attic_floor"
     )
 
 
@@ -16,32 +17,37 @@ def thermal_calculation_overlap_over_the_underground():
     thermal_calculation_template_1(
         x1="Теплотехнічний розрахунок над підвалом та техпідпіллям",
         x2=heat_transfer_coefficient4_1(),
-        x3=heat_transfer_coefficient4_2()
+        x3=heat_transfer_coefficient4_2(),
+        x4="thermal_calculation_overlap_over_the_underground"
     )
 
 
 # пункт 3.4
 def thermal_calculation_of_the_basement_floor_1():
     thermal_calculation_template_2(
-        x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для I зони"
+        x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для I зони",
+        x2="thermal_calculation_of_the_basement_floor_1"
     )
 
 
 def thermal_calculation_of_the_basement_floor_2():
     thermal_calculation_template_2(
-        x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для II зони"
+        x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для II зони",
+        x2="thermal_calculation_of_the_basement_floor_2"
     )
 
 
 def thermal_calculation_of_the_basement_floor_3():
     thermal_calculation_template_2(
-        x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для III зони"
+        x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для III зони",
+        x2="thermal_calculation_of_the_basement_floor_3"
     )
 
 
 def thermal_calculation_of_the_basement_floor_4():
     thermal_calculation_template_2(
-        x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для IV зони"
+        x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для IV зони",
+        x2="thermal_calculation_of_the_basement_floor_4"
     )
 
 
@@ -71,4 +77,10 @@ def heat_transfer_resistance_of_the_basement_floors():
     m1.therm_calc1(calc_values3, calc_area3)
     m1.therm_calc1(calc_values4, calc_area4)
     print("Відповідь", m1.therm_calc_all1())
-    print("Повна відповідь", m1.therm_calc_all2())
+    ans = m1.therm_calc_all2()
+    print("Повна відповідь", ans)
+    name = "heat_transfer_resistance_of_the_basement_floors"
+
+    sql_result.execute("INSERT INTO thermal_calculation_result_1_1 VALUES (?, ?, ?)",
+                       (None, name, ans))  # запись данных в таблицу
+    con_result.commit()  # подтверждение действий с БД

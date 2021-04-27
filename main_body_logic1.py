@@ -8,7 +8,8 @@ def thermal_calculation_inside_wall():
     thermal_calculation_template_1(
         x1="Теплотехнічний розрахунок зовнішніх стін",
         x2=heat_transfer_coefficient1_1(),
-        x3=heat_transfer_coefficient1_2()
+        x3=heat_transfer_coefficient1_2(),
+        x4="thermal_calculation_inside_wall"
     )
 
 
@@ -17,7 +18,8 @@ def thermal_calculation_inside_wall_zero():
     thermal_calculation_template_1(
         x1="Теплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00",
         x2=heat_transfer_coefficient2_1(),
-        x3=heat_transfer_coefficient2_2()
+        x3=heat_transfer_coefficient2_2(),
+        x4="thermal_calculation_inside_wall_zero"
     )
 
 
@@ -26,24 +28,28 @@ def thermal_calculation_inside_wall_zero():
 def thermal_calculation_basement_underground_1():
     thermal_calculation_template_2(
         x1="Теплотехнічний розрахунок стін підвалу нижче поверхні землі для I зони",
+        x2="thermal_calculation_basement_underground_1"
     )
 
 
 def thermal_calculation_basement_underground_2():
     thermal_calculation_template_2(
         x1="Теплотехнічний розрахунок стін підвалу нижче поверхні землі для II зони",
+        x2="thermal_calculation_basement_underground_2"
     )
 
 
 def thermal_calculation_basement_underground_3():
     thermal_calculation_template_2(
         x1="Теплотехнічний розрахунок стін підвалу нижче поверхні землі для III зони",
+        x2="thermal_calculation_basement_underground_3"
     )
 
 
 def thermal_calculation_basement_underground_4():
     thermal_calculation_template_2(
         x1="Теплотехнічний розрахунок стін підвалу нижче поверхні землі для IV зони",
+        x2="thermal_calculation_basement_underground_4"
     )
 
 
@@ -280,4 +286,10 @@ def heat_transfer_resistance_of_external_walls():
 
     m4.therm_calc3(point_coeff, point_num)
     print("Ответ", m4.therm_calc_all3())
-    print("\nПовна відповідь", m4.therm_calc_all4())
+    ans = m4.therm_calc_all4()
+    print("\nПовна відповідь", ans)
+    name = "heat_transfer_resistance_of_external_walls"
+
+    sql_result.execute("INSERT INTO thermal_calculation_result_1_1 VALUES (?, ?, ?)",
+                       (None, name, ans))  # запись данных в таблицу
+    con_result.commit()  # подтверждение действий с БД

@@ -9,11 +9,11 @@ class MainMenu:
             thermal_calculation_inside_wall()
             thermal_calculation_inside_wall_zero()
             a = int(input("Оберіть зону теплотехнічного розрахунку стін підвалу нижче поверхні землі:"
-                          "1 - I зона"
-                          "2 - II зона"
-                          "3 - III зона"
-                          "4 - IV зона"
-                          "- "))
+                          "\n1 - I зона"
+                          "\n2 - II зона"
+                          "\n3 - III зона"
+                          "\n4 - IV зона"
+                          "\n- "))
             if a == 1:
                 thermal_calculation_basement_underground_1()
             elif a == 2:
@@ -56,21 +56,7 @@ class MainMenu:
             con_result.close()
 
         if self.choose_action == 2:
-            sql_result.execute("DROP TABLE thermal_calculation_condition_inside_wall")
-            sql_result.execute("DROP TABLE thermal_calculation_condition_inside_wall_zero")
-            sql_result.execute("DROP TABLE thermal_calculation_condition_basement_underground_1")
-            sql_result.execute("DROP TABLE thermal_calculation_condition_basement_underground_2")
-            sql_result.execute("DROP TABLE thermal_calculation_condition_basement_underground_3")
-            sql_result.execute("DROP TABLE thermal_calculation_condition_basement_underground_4")
-            sql_result.execute("DROP TABLE thermal_calculation_condition_of_the_attic_floor")
-            sql_result.execute("DROP TABLE thermal_calculation_condition_overlap_over_the_underground")
-            sql_result.execute("DROP TABLE thermal_calculation_condition_of_the_basement_floor_1")
-            sql_result.execute("DROP TABLE thermal_calculation_condition_of_the_basement_floor_2")
-            sql_result.execute("DROP TABLE thermal_calculation_condition_of_the_basement_floor_3")
-            sql_result.execute("DROP TABLE thermal_calculation_condition_of_the_basement_floor_4")
-
             sql_result.execute("DROP TABLE thermal_calculation_result_1_1")
-            sql_result.execute("DROP TABLE thermal_calculation_result_1_2")
 
         if self.choose_action == 3:
             return

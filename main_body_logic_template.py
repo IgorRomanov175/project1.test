@@ -3,7 +3,7 @@ from logic.logic2 import *
 from main_body_logic_db import *
 
 
-def thermal_calculation_template_1(x1, x2, x3):
+def thermal_calculation_template_1(x1, x2, x3, x4):
     print(x1)
 
     z1 = x2
@@ -22,21 +22,22 @@ def thermal_calculation_template_1(x1, x2, x3):
 
     print("Ответ", m1.full_formul_calc())
     ans = m1.full_formul_calc()
+    name = x4
 
     if x1 == "Теплотехнічний розрахунок зовнішніх стін":
-        data_base_1_2(ans)
+        data_base_1(name, ans)
     elif x1 == "Теплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00":
-        data_base_2_2(ans)
+        data_base_1(name, ans)
     elif x1 == "Теплотехнічний розрахунок горищного покриття":
-        data_base_6_2(ans)
+        data_base_2(name, ans)
     elif x1 == "Теплотехнічний розрахунок над підвалом та техпідпіллям":
-        data_base_4_2(ans)
+        data_base_2(name, ans)
     else:
         print("Помилка")
         return
 
 
-def thermal_calculation_template_2(x1):
+def thermal_calculation_template_2(x1, x2):
     print(x1)
     if x1 == "Теплотехнічний розрахунок стін підвалу нижче поверхні землі для I зони":
         z_zero = 2.1
@@ -50,7 +51,7 @@ def thermal_calculation_template_2(x1):
     if x1 == "Теплотехнічний розрахунок стін підвалу нижче поверхні землі для IV зони":
         z_zero = 14.2
 
-    if x1 == "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для I зони" :
+    if x1 == "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для I зони":
         z_zero = 2.1
 
     if x1 == "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для II зони":
@@ -75,23 +76,24 @@ def thermal_calculation_template_2(x1):
 
     print("Ответ", m3.full_therm2_calc())
     ans = m3.full_therm2_calc()
+    name = x2
 
     if x1 == "Теплотехнічний розрахунок стін підвалу нижче поверхні землі для I зони":
-        data_base_3_2_1(ans)
+        data_base_1(name, ans)
     elif x1 == "Теплотехнічний розрахунок стін підвалу нижче поверхні землі для II зони":
-        data_base_3_2_2(ans)
+        data_base_1(name, ans)
     elif x1 == "Теплотехнічний розрахунок стін підвалу нижче поверхні землі для III зони":
-        data_base_3_2_3(ans)
+        data_base_1(name, ans)
     elif x1 == "Теплотехнічний розрахунок стін підвалу нижче поверхні землі для IV зони":
-        data_base_3_2_4(ans)
+        data_base_1(name, ans)
     elif x1 == "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для I зони":
-        data_base_5_2_1(ans)
+        data_base_3(name, ans)
     elif x1 == "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для II зони":
-        data_base_5_2_2(ans)
+        data_base_3(name, ans)
     elif x1 == "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для III зони":
-        data_base_5_2_3(ans)
+        data_base_3(name, ans)
     elif x1 == "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для IV зони":
-        data_base_5_2_4(ans)
+        data_base_3(name, ans)
     else:
         print("Помилка")
         return
