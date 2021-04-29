@@ -422,12 +422,10 @@ def min_ht_resistance_of_external_enclosing_structures():
     elif coef_e == 2:
         e = 1.1
 
-    calc_area_all = calc_area_1 + calc_area_2 + calc_area_3 + calc_area_4 + calc_area_5 + calc_area_6
-    print(calc_area_all)
+
     calc_value_all = e * ((calc_area_1 / calc_value_1) + (calc_area_2 / calc_value_2) + (calc_area_3 / calc_value_3) +
                           (calc_area_4 / calc_value_4) + (calc_area_5 / calc_value_5) + (calc_area_6 / calc_value_6))
-    print(calc_value_all)
-    k_sum = calc_value_all / calc_area_all
+    k_sum = calc_value_all / calc_all_initial
     print(k_sum)
 
     print("Розрахунок середньої густини повітря, що надходить до приміщення за рахунок інфільтрації та вентиляції")
@@ -460,10 +458,13 @@ def min_ht_resistance_of_external_enclosing_structures():
     x2 = 0.278  # розмірний коефіцієнт
     c = 1  # питома теплоємність повітря
 
-    k_inf = x2 * c * n_ob * v_v * v_h * y_z * nu / calc_area_all
+    k_inf = x2 * c * n_ob * v_v * v_h * y_z * nu / calc_all_initial
     print("Відповідь: ", k_inf)
 
-    print("Загальний коефіцієнт теплопередачі: ")
+    name = "Загальний коефіцієнт теплопередачі: "
+    print(name)
 
     k_bud = k_sum + k_inf
-    print(k_bud)
+    print("Загальний коефіцієнт теплопередачі: ", k_bud)
+
+    data_base_1(name, k_bud)

@@ -10,4 +10,5 @@ calc_area_3 = 1707.8  # float(input("\nПлоща підлоги по грунт
 calc_area_4 = 2271.8  # float(input("\nПлоща горищного перекриття: "))
 calc_area_5 = 554.7  # float(input("\nПлоща світлопрозорих конструкцій: "))
 calc_area_6 = 36.26  # float(input("\nПлоща вхідних дверей: "))
+calc_all_initial = calc_area_1 + calc_area_2 + calc_area_3 + calc_area_4 + calc_area_5 + calc_area_6
 calc_volume_1 = 15458.1  # float(input("\nОпалювальний об'єм будинку: "))

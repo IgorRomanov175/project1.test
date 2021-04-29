@@ -57,6 +57,9 @@ class MainMenu:
 
             coefficient_glazing_of_the_facade()
 
+            ##################################################
+            # пункт 5
+
 
 
             con.commit()

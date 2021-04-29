@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09082d89-cd07-4806-b7bd-cd5050c5f027" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mb_logic3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body.db" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mb_initial_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_initial_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mb_logic1.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mb_logic2.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mb_logic3.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mb_logic_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mb_logic_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic_template.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.db" beforeDir="false" afterPath="$PROJECT_DIR$/result.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_db.py" afterDir="false" />
     </list>
@@ -126,7 +125,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mb_logic1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="mb_initial_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="project1.test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -138,7 +137,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Python_project\project1.test\mb_logic1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mb_initial_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -171,10 +170,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main_body" />
+        <item itemvalue="Python.mb_initial_data" />
         <item itemvalue="Python.mb_logic2" />
         <item itemvalue="Python.excel" />
         <item itemvalue="Python.main_body_logic3" />
-        <item itemvalue="Python.mb_logic1" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619701592814</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="lite reworking db function system">
+      <created>1619708618746</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1619708618746</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -276,6 +282,7 @@
     <MESSAGE value="reworking database system, delete tables" />
     <MESSAGE value="add new calculation block (min_ht_resistance_of_external_enclosing_structures)" />
     <MESSAGE value="finished mb_logic1.py, start working with mb_logic2.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished mb_logic1.py, start working with mb_logic2.py" />
+    <MESSAGE value="lite reworking db function system" />
+    <option name="LAST_COMMIT_MESSAGE" value="lite reworking db function system" />
   </component>
 </project>

@@ -9,6 +9,7 @@ def coefficient_glazing_of_the_facade():
     data_base_3(name_1, m_sk)
 
 
+
     a_kbud = (calc_area_1 + calc_area_2 + calc_area_3 + calc_area_4 + calc_area_5 + calc_area_6) / calc_volume_1
     name_2 = "Показник компактності будинку"
     print("Показник компактності будинку: ", a_kbud)
