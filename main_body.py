@@ -1,5 +1,5 @@
-from main_body_logic1 import *
-from main_body_logic2 import *
+from mb_logic1 import *
+
 
 
 class MainMenu:
@@ -23,7 +23,6 @@ class MainMenu:
             elif a == 4:
                 thermal_calculation_basement_underground_4()
             heat_transfer_resistance_of_external_walls()
-
             thermal_calculation_of_the_attic_floor()
             thermal_calculation_overlap_over_the_underground()
             b = int(input("Додати розрахунок підлоги підвалу?\n1-ТАК\n2-НІ\n-"))
@@ -46,6 +45,7 @@ class MainMenu:
                 else:
                     break
             heat_transfer_resistance_of_the_basement_floors()
+            min_ht_resistance_of_external_enclosing_structures()
 
 
 

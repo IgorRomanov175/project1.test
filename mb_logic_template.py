@@ -1,6 +1,6 @@
 from logic.logic1 import *
 from logic.logic2 import *
-from main_body_logic_db import *
+from mb_logic_db import *
 
 
 def thermal_calculation_template_1(x1, x2, x3, x4):

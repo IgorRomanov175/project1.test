@@ -1,5 +1,5 @@
 from result_db import *
-from main_body_db import *
+from mb_db import *
 
 
 def data_base_1(name, ans):

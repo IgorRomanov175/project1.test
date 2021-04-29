@@ -3,7 +3,7 @@ class Therm3_Math1:
         self.x = y1 / x1
 
 
-class Therm3_logic:
+class Therm3_1_logic:
     def __init__(self, area):
         self.zero = 0
         self.area = area
