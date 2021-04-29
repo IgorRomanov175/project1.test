@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09082d89-cd07-4806-b7bd-cd5050c5f027" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main_body_logic3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/array1/linar_heat_transfer_coefficient.py" beforeDir="false" afterPath="$PROJECT_DIR$/array1/linar_heat_transfer_coefficient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body.db" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_body.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_body_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_logic1.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_logic2.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_body_logic3.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_logic_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body_logic_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body_logic_template.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.db" beforeDir="false" afterPath="$PROJECT_DIR$/result.db" afterDir="false" />
@@ -44,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -62,7 +61,7 @@
       <recent name="C:\Python_project\project1.test\logic" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main_body">
+  <component name="RunManager" selected="Python.main_body_logic3">
     <configuration name="main_body" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="project1.test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,8 +169,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main_body" />
         <item itemvalue="Python.main_body_logic3" />
+        <item itemvalue="Python.main_body" />
         <item itemvalue="Python.main_body_logic1 (1)" />
         <item itemvalue="Python.main_body_db" />
         <item itemvalue="Python.main_body_logic1" />
@@ -232,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618775006684</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="reworking database system, delete tables">
+      <created>1619520192525</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619520192525</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -252,6 +258,7 @@
     <MESSAGE value="reworking thermal_calculation_basement_underground" />
     <MESSAGE value="add item 3.6 full" />
     <MESSAGE value="reworking database system" />
-    <option name="LAST_COMMIT_MESSAGE" value="reworking database system" />
+    <MESSAGE value="reworking database system, delete tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="reworking database system, delete tables" />
   </component>
 </project>

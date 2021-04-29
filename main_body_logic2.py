@@ -1,5 +1,5 @@
-from main_body_logic_template import *
 from logic.logic3_1 import *
+from main_body_logic_template import *
 
 
 # пункт 3.2
@@ -19,6 +19,9 @@ def thermal_calculation_overlap_over_the_underground():
         x2=heat_transfer_coefficient4_1(),
         x3=heat_transfer_coefficient4_2(),
         x4="thermal_calculation_overlap_over_the_underground"
+    )
+    thermal_calculation_template_3(
+        name="calculation_coefficient_1"
     )
 
 

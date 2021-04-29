@@ -29,9 +29,9 @@ def thermal_calculation_template_1(x1, x2, x3, x4):
     elif x1 == "Теплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00":
         data_base_1(name, ans)
     elif x1 == "Теплотехнічний розрахунок горищного покриття":
-        data_base_2(name, ans)
+        data_base_1(name, ans)
     elif x1 == "Теплотехнічний розрахунок над підвалом та техпідпіллям":
-        data_base_2(name, ans)
+        data_base_1(name, ans)
     else:
         print("Помилка")
         return
@@ -87,13 +87,30 @@ def thermal_calculation_template_2(x1, x2):
     elif x1 == "Теплотехнічний розрахунок стін підвалу нижче поверхні землі для IV зони":
         data_base_1(name, ans)
     elif x1 == "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для I зони":
-        data_base_3(name, ans)
+        data_base_1(name, ans)
     elif x1 == "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для II зони":
-        data_base_3(name, ans)
+        data_base_1(name, ans)
     elif x1 == "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для III зони":
-        data_base_3(name, ans)
+        data_base_1(name, ans)
     elif x1 == "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для IV зони":
-        data_base_3(name, ans)
+        data_base_1(name, ans)
     else:
         print("Помилка")
         return
+
+
+def thermal_calculation_template_3(name):
+    name = name
+    t_v = float(input("Температура 1: "))
+    t_n = float(input("Температура 2: "))
+    t_z = float(input("Температура 3: "))
+
+    n = (t_v - t_n) / (t_v - t_z)
+    r_q_min = 3.75
+
+    r_q_1 = n * r_q_min
+    ans = r_q_1
+    print(ans)
+
+    if name == "calculation_coefficient_1":
+        data_base_2(name, ans)

@@ -32,7 +32,7 @@ def thermal_calculation_condition_inside_wall_zero():
         return result[0]
 
 
-def thermal_calculation_condition_basement_underground():
+def thermal_calculation_condition_basement_underground_1():
     sql_result.execute(
         """SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
         WHERE thermal_calculation_name = "thermal_calculation_basement_underground_1" """)
@@ -40,12 +40,54 @@ def thermal_calculation_condition_basement_underground():
         return result[0]
 
 
-value1_1 = thermal_calculation_condition_inside_wall()
-value1_2 = thermal_calculation_condition_inside_wall_zero()
-value1_3 = thermal_calculation_condition_basement_underground()
+def thermal_calculation_condition_basement_underground_2():
+    sql_result.execute(
+        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
+        WHERE thermal_calculation_name = "thermal_calculation_basement_underground_2" """)
+    for result in sql_result:
+        return result[0]
 
+
+def thermal_calculation_condition_basement_underground_3():
+    sql_result.execute(
+        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
+        WHERE thermal_calculation_name = "thermal_calculation_basement_underground_3" """)
+    for result in sql_result:
+        return result[0]
+
+
+def thermal_calculation_condition_basement_underground_4():
+    sql_result.execute(
+        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
+        WHERE thermal_calculation_name = "thermal_calculation_basement_underground_4" """)
+    for result in sql_result:
+        return result[0]
+
+
+def heat_transfer_resistance_of_external_walls_condition():
+    sql_result.execute(
+        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
+        WHERE thermal_calculation_name = "heat_transfer_resistance_of_external_walls" """)
+    for result in sql_result:
+        return result[0]
 
 # -----------------------------------------------------------------------------------------------------------------------
+
+def thermal_calculation_condition_of_the_attic_floor():
+    sql_result.execute(
+        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
+        WHERE thermal_calculation_name = "thermal_calculation_of_the_attic_floor" """)
+    for result in sql_result:
+        return result[0]
+
+
+def thermal_calculation_condition_overlap_over_the_underground():
+    sql_result.execute(
+        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
+        WHERE thermal_calculation_name = "thermal_calculation_overlap_over_the_underground" """)
+    for result in sql_result:
+        return result[0]
+
 
 def thermal_calculation_condition_of_the_basement_floor_1():
     sql_result.execute(
@@ -79,13 +121,15 @@ def thermal_calculation_condition_of_the_basement_floor_4():
         return result[0]
 
 
-value2_1 = thermal_calculation_condition_of_the_basement_floor_1()
-value2_2 = thermal_calculation_condition_of_the_basement_floor_2()
-value2_3 = thermal_calculation_condition_of_the_basement_floor_3()
-value2_4 = thermal_calculation_condition_of_the_basement_floor_4()
+def heat_transfer_resistance_of_the_basement_floors_condition():
+    sql_result.execute(
+        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
+        WHERE thermal_calculation_name = "heat_transfer_resistance_of_the_basement_floors" """)
+    for result in sql_result:
+        return result[0]
+
 
 # ----------------------------------------------------------------------------------------------------------------------
-
 
 
 # ----------------------------------------------------------------------------------------------------------------------

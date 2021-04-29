@@ -16,6 +16,14 @@ with sq.connect('main_body.db') as con:
 
     con.commit()
 
+    sql.execute(""" CREATE TABLE IF NOT EXISTS calculation_coefficient (
+                    name_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    name STRING,
+                    coefficient FLOAT
+                    )""")
+
+    con.commit()
+
 
     def heat_transfer_coefficient1_1():
         sql.execute(
@@ -111,3 +119,13 @@ with sq.connect('main_body.db') as con:
             WHERE name_id = 6 """)
         for result in sql:
             return result[0]
+
+#-----------------------------------------------------------------------------------------------------------------------
+
+    def calculation_coefficient_1():
+        sql.execute(
+            """SELECT coefficient FROM heat_transfer_coefficient
+            WHERE name =  "calculation_coefficient_1" """)
+        for result in sql:
+            return result[0]
+

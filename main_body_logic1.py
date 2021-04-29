@@ -67,7 +67,7 @@ def heat_transfer_resistance_of_external_walls():
     print("Теплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00: ", calc_values2)
 
     calc_area3 = float(input("\nПлоща стін підвалу нижче поверхні землі: "))
-    calc_values3 = float(thermal_calculation_condition_basement_underground())
+    calc_values3 = float(thermal_calculation_condition_basement_underground_1())
     print("Теплотехнічний розрахунок стін підвалу нижче поверхні землі: ", calc_values3)
 
     area = calc_area1 + calc_area2 + calc_area3
