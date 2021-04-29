@@ -1,4 +1,5 @@
 from mb_logic1 import *
+from mb_logic2 import *
 
 
 
@@ -6,6 +7,10 @@ class MainMenu:
     def __init__(self, choose_action):
         self.choose_action = choose_action
         if choose_action == 1:
+
+            ################################################################
+            # пункт 3
+
             thermal_calculation_inside_wall()
             thermal_calculation_inside_wall_zero()
             a = int(input("Оберіть зону теплотехнічного розрахунку стін підвалу нижче поверхні землі:"
@@ -47,6 +52,11 @@ class MainMenu:
             heat_transfer_resistance_of_the_basement_floors()
             min_ht_resistance_of_external_enclosing_structures()
 
+            ##################################################
+            # пункт 4
+
+            coefficient_glazing_of_the_facade()
+
 
 
             con.commit()
@@ -57,6 +67,7 @@ class MainMenu:
 
         if self.choose_action == 2:
             sql_result.execute("DROP TABLE thermal_calculation_result_1_1")
+            sql_result.execute("DROP TABLE thermal_calculation_result_1_2")
 
         if self.choose_action == 3:
             return

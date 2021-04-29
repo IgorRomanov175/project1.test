@@ -3,7 +3,7 @@ from logic.logic2 import *
 from mb_logic_db import *
 
 
-def thermal_calculation_template_1(x1, x2, x3, x4):
+def thermal_calculation_template_1(x1, x2, x3):
     print(x1)
 
     z1 = x2
@@ -22,7 +22,7 @@ def thermal_calculation_template_1(x1, x2, x3, x4):
 
     print("Ответ", m1.full_formul_calc())
     ans = m1.full_formul_calc()
-    name = x4
+    name = x1
 
     if x1 == "Теплотехнічний розрахунок зовнішніх стін":
         data_base_1(name, ans)
@@ -37,7 +37,7 @@ def thermal_calculation_template_1(x1, x2, x3, x4):
         return
 
 
-def thermal_calculation_template_2(x1, x2):
+def thermal_calculation_template_2(x1):
     print(x1)
     if x1 == "Теплотехнічний розрахунок стін підвалу нижче поверхні землі для I зони":
         z_zero = 2.1
@@ -76,7 +76,7 @@ def thermal_calculation_template_2(x1, x2):
 
     print("Ответ", m3.full_therm2_calc())
     ans = m3.full_therm2_calc()
-    name = x2
+    name = x1
 
     if x1 == "Теплотехнічний розрахунок стін підвалу нижче поверхні землі для I зони":
         data_base_1(name, ans)
