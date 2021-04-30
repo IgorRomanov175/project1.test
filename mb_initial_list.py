@@ -1,5 +1,6 @@
 from mb_logic1 import *
 from mb_logic2 import *
+from mb_logic3 import *
 
 
 def initial_list():
@@ -54,6 +55,15 @@ def initial_list():
 
     ##################################################
     # пункт 5
+
+    heat_consumption_of_the_house_through_the_enclosure()
+    domestic_heat_during_the_heating_season()
+    heat_flow_through_the_windows()
+    heat_consumption_for_heating_the_building()
+
+    ##################################################
+    # пункт 6
+
 
     con.commit()
     con_result.commit()

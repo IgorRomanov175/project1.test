@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="09082d89-cd07-4806-b7bd-cd5050c5f027" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_body.db" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_body.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mb_initial_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_initial_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mb_initial_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_initial_list.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mb_logic1.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mb_logic2.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mb_logic3.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mb_logic_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result.db" beforeDir="false" afterPath="$PROJECT_DIR$/result.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_db.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -259,7 +255,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619708618746</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add mb_logic3.py">
+      <created>1619718725173</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1619718725173</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add mb_initial_list.py">
+      <created>1619718911618</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1619718911618</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -283,6 +293,8 @@
     <MESSAGE value="add new calculation block (min_ht_resistance_of_external_enclosing_structures)" />
     <MESSAGE value="finished mb_logic1.py, start working with mb_logic2.py" />
     <MESSAGE value="lite reworking db function system" />
-    <option name="LAST_COMMIT_MESSAGE" value="lite reworking db function system" />
+    <MESSAGE value="add mb_logic3.py" />
+    <MESSAGE value="add mb_initial_list.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="add mb_initial_list.py" />
   </component>
 </project>
