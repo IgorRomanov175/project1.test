@@ -10,6 +10,7 @@ class MainMenu:
         if self.choose_action == 2:
             sql_result.execute("DROP TABLE thermal_calculation_result_1_1")
             sql_result.execute("DROP TABLE thermal_calculation_result_1_2")
+            sql_result.execute("DROP TABLE thermal_calculation_result_1_3")
 
         if self.choose_action == 3:
             return

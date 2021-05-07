@@ -4,7 +4,7 @@ from mb_initial_data import *
 
 def heat_consumption_of_the_house_through_the_enclosure():
     # Тепловитрати будинку через огороджувальну оболонку
-    k_bud = total_heat_transfer_coefficient_of_the_house()
+    k_bud = total_heat_transfer_coefficient_of_the_house_condition()
 
     q_k = x1 * k_bud * d_d * calc_all_initial
     name = "Тепловитрати будинку через огороджувальну оболонку"
@@ -19,7 +19,7 @@ def domestic_heat_during_the_heating_season():
     n_1 = int(input("Кількість людей: "))
     t_t_1 = int(input("Кількість годин на тиждень: "))
     t_m_1 = int(input("Кількість годин на місяць: "))
-    q_1 = q_t_1 * n_1 * (t_t_1 / t_m_1)
+    q_1 = (q_t_1 * n_1 * (t_t_1 / t_m_1)) / 1000
     print("Тепловиділення від людей протягом тижня: ", q_1)
 
     q_t_2 = float(input("Кількість віділеного тепла на 1 техніку: "))
@@ -27,8 +27,8 @@ def domestic_heat_during_the_heating_season():
     t_t_2 = int(input("Кількість годин на тиждень: "))
     t_m_2 = int(input("Кількість годин на місяць: "))
 
-    q_2 = q_t_2 * n_2 * (t_t_2 / t_m_2) * 0.95
-    print("Тепловиділення від техніки протягом тижня: ", q_1)
+    q_2 = (q_t_2 * n_2 * (t_t_2 / t_m_2) * 0.95) / 1000
+    print("Тепловиділення від техніки протягом тижня: ", q_2)
 
     q_vnp_coeff = (q_1 + q_2) * 1000 / calc_area_7
     print("Величина побутових теплонадходжень: ", q_vnp_coeff)
@@ -54,7 +54,8 @@ def heat_flow_through_the_windows():
     i_s = float(input("Суми сумарної сонячної радіації - південь: "))
     i_w = float(input("Суми сумарної сонячної радіації - захід: "))
 
-    q_s = e_v_in * e_v_out * (f_n * i_n + f_e * i_e + f_s * i_s + f_w * i_w)
+    q_s_m = e_v_in * e_v_out * (f_n * i_n + f_e * i_e + f_s * i_s + f_w * i_w)
+    q_s = (q_s_m * 2.778) / 10
     name = "Площа світлових прорізів фасадів будинку"
     print(name, ": ", q_s)
 
@@ -73,3 +74,13 @@ def heat_consumption_for_heating_the_building():
 
     data_base_4(name, q_rik)
 
+
+def heat_consumption_and_supply_of_heating_period():
+    # розрахункове значення питомих тепловитрат і теплонадходжень будинку за опалювальний період
+    q_rik = heat_consumption_for_heating_the_building_condition()
+
+    q_bud = q_rik / calc_volume_1
+    name = "Розрахункове значення питомих тепловитрат і теплонадходжень будинку"
+    print(name, ": ", q_bud)
+
+    data_base_4(name, q_bud)

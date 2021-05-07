@@ -457,7 +457,7 @@ def min_ht_resistance_of_external_enclosing_structures():
     k_inf = x2 * c * n_ob * v_v * v_h * y_z * nu / calc_all_initial
     print("Відповідь: ", k_inf)
 
-    name = "Загальний коефіцієнт теплопередачі: "
+    name = "Загальний коефіцієнт теплопередачі"
     print(name)
 
     k_bud = k_sum + k_inf
