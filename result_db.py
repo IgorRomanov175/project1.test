@@ -115,33 +115,37 @@ def thermal_calculation_condition_of_the_basement_floor_1():
 
 
 def thermal_calculation_condition_of_the_basement_floor_2():
-    sql_result.execute(
-        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
-        WHERE thermal_calculation_name = "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для II зони" """)
+    sql_result.execute("""
+        SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
+        WHERE thermal_calculation_name = "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для II зони" 
+        """)
     for result in sql_result:
         return result[0]
 
 
 def thermal_calculation_condition_of_the_basement_floor_3():
-    sql_result.execute(
-        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
-        WHERE thermal_calculation_name = "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для III зони" """)
+    sql_result.execute("""
+        SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
+        WHERE thermal_calculation_name = "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для III зони" 
+        """)
     for result in sql_result:
         return result[0]
 
 
 def thermal_calculation_condition_of_the_basement_floor_4():
-    sql_result.execute(
-        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
-        WHERE thermal_calculation_name = "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для IV зони" """)
+    sql_result.execute("""
+        SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
+        WHERE thermal_calculation_name = "Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для IV зони" 
+        """)
     for result in sql_result:
         return result[0]
 
 
 def heat_transfer_resistance_of_the_basement_floors_condition():
-    sql_result.execute(
-        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
-        WHERE thermal_calculation_name = "Теплотехнічний розрахунок підлоги підвалу" """)
+    sql_result.execute("""
+        SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
+        WHERE thermal_calculation_name = "Теплотехнічний розрахунок підлоги підвалу" 
+        """)
     for result in sql_result:
         return result[0]
 
@@ -150,9 +154,10 @@ def heat_transfer_resistance_of_the_basement_floors_condition():
 
 
 def total_heat_transfer_coefficient_of_the_house_condition():
-    sql_result.execute(
-        """SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
-        WHERE thermal_calculation_name = "Загальний коефіцієнт теплопередачі" """)
+    sql_result.execute("""
+        SELECT thermal_calculation_result FROM thermal_calculation_result_1_1
+        WHERE thermal_calculation_name = "Загальний коефіцієнт теплопередачі" 
+        """)
     for result in sql_result:
         return result[0]
 

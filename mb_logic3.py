@@ -3,6 +3,7 @@ from mb_initial_data import *
 
 
 def heat_consumption_of_the_house_through_the_enclosure():
+    print("\n#######################################################################################################\n")
     # Тепловитрати будинку через огороджувальну оболонку
     k_bud = total_heat_transfer_coefficient_of_the_house_condition()
 
@@ -14,6 +15,7 @@ def heat_consumption_of_the_house_through_the_enclosure():
 
 
 def domestic_heat_during_the_heating_season():
+    print("\n#######################################################################################################\n")
     # Побутове надходження тепла протягом опалювального сезону
     q_t_1 = float(input("Кількість віділеного тепла на 1 людину: "))
     n_1 = int(input("Кількість людей: "))
@@ -42,6 +44,7 @@ def domestic_heat_during_the_heating_season():
 
 
 def heat_flow_through_the_windows():
+    print("\n#######################################################################################################\n")
     print("Площа світлових прорізів фасадів будинку")
     f_n = float(input("Площа світлових прорізів фасадів - північ: "))
     f_e = float(input("Площа світлових прорізів фасадів - схід: "))
@@ -63,6 +66,7 @@ def heat_flow_through_the_windows():
 
 
 def heat_consumption_for_heating_the_building():
+    print("\n#######################################################################################################\n")
     # Розрахункові витрати теплової енергії
     q_k = heat_consumption_of_the_house_through_the_enclosure_condition()
     q_vnp = domestic_heat_during_the_heating_season_condition()
@@ -76,6 +80,7 @@ def heat_consumption_for_heating_the_building():
 
 
 def heat_consumption_and_supply_of_heating_period():
+    print("\n#######################################################################################################\n")
     # розрахункове значення питомих тепловитрат і теплонадходжень будинку за опалювальний період
     q_rik = heat_consumption_for_heating_the_building_condition()
 

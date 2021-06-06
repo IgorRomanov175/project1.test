@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09082d89-cd07-4806-b7bd-cd5050c5f027" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mb_logic4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body.db" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_body.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mb_initial_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_initial_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mb_initial_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_initial_list.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mb_logic1.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mb_logic2.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mb_logic3.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mb_logic4.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mb_logic_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mb_logic_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic_template.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.db" beforeDir="false" afterPath="$PROJECT_DIR$/result.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_db.py" afterDir="false" />
     </list>
@@ -279,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619777055475</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add new folder for calculate energy effency class">
+      <created>1620380389060</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1620380389060</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -302,6 +312,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="reworking data base system&#10;add new calculation block" />
@@ -317,6 +328,7 @@
     <MESSAGE value="add mb_logic3.py" />
     <MESSAGE value="add mb_initial_list.py" />
     <MESSAGE value="mb_logic3.py finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="mb_logic3.py finished" />
+    <MESSAGE value="add new folder for calculate energy effency class" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new folder for calculate energy effency class" />
   </component>
 </project>

@@ -3,22 +3,18 @@ from logic.logic2 import *
 from mb_logic_db import *
 
 
-def thermal_calculation_template_1(x1, x2, x3):
+def thermal_calculation_template_1(x1, x2, x3, x4):
+    print("\n#######################################################################################################\n")
     print(x1)
 
     z1 = x2
     z2 = x3
 
     m1 = Therm1_Logic(z1, z2)  # создание объекта для расчёта термического оперения шаров стены
-
-    flag = int(input("Добавить расчётный слой?\n1 - ДА;\n2 - НЕТ;\n-"))  # запуск цикла с сбором информации
-    while flag == 1:  # создание цикла
-        x = float(input("Толщина: "))  # сбор данных: толщина и теплопроводимость
-        y = float(input("Теплопроводимость: "))
-
+    for i in x4:
+        x = i[0]
+        y = i[1]
         m1.therm_calc(x, y)  # метод для расчёта термического оперения шаров стены
-
-        flag = int(input("Добавить расчётный слой?\n-"))  # зацикливание процесса
 
     print("Ответ", m1.full_formul_calc())
     ans = m1.full_formul_calc()
@@ -37,7 +33,8 @@ def thermal_calculation_template_1(x1, x2, x3):
         return
 
 
-def thermal_calculation_template_2(x1):
+def thermal_calculation_template_2(x1, x2):
+    print("\n#######################################################################################################\n")
     print(x1)
     if x1 == "Теплотехнічний розрахунок стін підвалу нижче поверхні землі для I зони":
         z_zero = 2.1
@@ -64,15 +61,10 @@ def thermal_calculation_template_2(x1):
         z_zero = 14.2
 
     m3 = Therm2_Logic(z_zero)
-
-    flag = int(input("Добавить расчётный слой?\n1 - ДА;\n2 - НЕТ;\n-"))  # запуск цикла с сбором информации
-    while flag == 1:  # создание цикла
-        x = float(input("Толщина: "))  # сбор данных: толщина и теплопроводимость
-        y = float(input("Теплопроводимость: "))
-
+    for i in x2:
+        x = i[0]
+        y = i[1]
         m3.therm2_calc(x, y)
-
-        flag = int(input("Добавить расчётный слой?\n-"))  # зацикливание процесса
 
     print("Ответ", m3.full_therm2_calc())
     ans = m3.full_therm2_calc()
@@ -100,6 +92,7 @@ def thermal_calculation_template_2(x1):
 
 
 def thermal_calculation_template_3(name):
+    print("\n#######################################################################################################\n")
     name = name
     t_v = float(input("Температура 1: "))
     t_n = float(input("Температура 2: "))

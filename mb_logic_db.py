@@ -10,7 +10,7 @@ def data_base_1(name, ans):
 
 def data_base_2(name, ans):
     sql.execute("INSERT INTO calculation_coefficient VALUES (?, ?, ?)",
-                       (None, name, ans))  # запись данных в таблицу
+                (None, name, ans))  # запись данных в таблицу
     con.commit()  # подтверждение действий с БД
 
 

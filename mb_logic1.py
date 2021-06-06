@@ -1,8 +1,8 @@
 from array1.linar_heat_transfer_coefficient import *
 from logic.logic3 import *
 from logic.logic3_1 import *
-from mb_logic_template import *
 from mb_initial_data import *
+from mb_logic_template import *
 
 
 # пункт 3.1.1
@@ -11,6 +11,7 @@ def thermal_calculation_inside_wall():
         x1="Теплотехнічний розрахунок зовнішніх стін",
         x2=heat_transfer_coefficient1_1(),
         x3=heat_transfer_coefficient1_2(),
+        x4=thermal_calculation_inside_wall_array
     )
 
 
@@ -22,6 +23,7 @@ def thermal_calculation_inside_wall_zero():
         x1="Теплотехнічний розрахунок зовнішньої стіни нижче відмітки 0.00",
         x2=heat_transfer_coefficient2_1(),
         x3=heat_transfer_coefficient2_2(),
+        x4=thermal_calculation_inside_wall_zero_array
     )
 
 
@@ -32,24 +34,28 @@ def thermal_calculation_inside_wall_zero():
 def thermal_calculation_basement_underground_1():
     thermal_calculation_template_2(
         x1="Теплотехнічний розрахунок стін підвалу нижче поверхні землі для I зони",
+        x2=thermal_calculation_basement_underground_array
     )
 
 
 def thermal_calculation_basement_underground_2():
     thermal_calculation_template_2(
         x1="Теплотехнічний розрахунок стін підвалу нижче поверхні землі для II зони",
+        x2=thermal_calculation_basement_underground_array
     )
 
 
 def thermal_calculation_basement_underground_3():
     thermal_calculation_template_2(
         x1="Теплотехнічний розрахунок стін підвалу нижче поверхні землі для III зони",
+        x2=thermal_calculation_basement_underground_array
     )
 
 
 def thermal_calculation_basement_underground_4():
     thermal_calculation_template_2(
         x1="Теплотехнічний розрахунок стін підвалу нижче поверхні землі для IV зони",
+        x2=thermal_calculation_basement_underground_array
     )
 
 
@@ -57,6 +63,7 @@ def thermal_calculation_basement_underground_4():
 
 # пункт 3.1.4
 def heat_transfer_resistance_of_external_walls():
+    print("\n#######################################################################################################\n")
     print("\nРозрахунок приведеного опору теплопередачі зовнішніх стін\n")
     print("Площа зовнішніх стін: ", calc_area_1)
     calc_values1 = float(thermal_calculation_condition_inside_wall())
@@ -302,6 +309,7 @@ def thermal_calculation_of_the_attic_floor():
         x1="Теплотехнічний розрахунок горищного покриття",
         x2=heat_transfer_coefficient3_1(),
         x3=heat_transfer_coefficient3_2(),
+        x4=thermal_calculation_of_the_attic_floor_array
     )
 
 
@@ -313,6 +321,7 @@ def thermal_calculation_overlap_over_the_underground():
         x1="Теплотехнічний розрахунок над підвалом та техпідпіллям",
         x2=heat_transfer_coefficient4_1(),
         x3=heat_transfer_coefficient4_2(),
+        x4=thermal_calculation_overlap_over_the_underground_array
     )
     thermal_calculation_template_3(
         name="calculation_coefficient_1"
@@ -325,24 +334,28 @@ def thermal_calculation_overlap_over_the_underground():
 def thermal_calculation_of_the_basement_floor_1():
     thermal_calculation_template_2(
         x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для I зони",
+        x2=thermal_calculation_of_the_basement_floor_array
     )
 
 
 def thermal_calculation_of_the_basement_floor_2():
     thermal_calculation_template_2(
         x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для II зони",
+        x2=thermal_calculation_of_the_basement_floor_array
     )
 
 
 def thermal_calculation_of_the_basement_floor_3():
     thermal_calculation_template_2(
         x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для III зони",
+        x2=thermal_calculation_of_the_basement_floor_array
     )
 
 
 def thermal_calculation_of_the_basement_floor_4():
     thermal_calculation_template_2(
         x1="Теплотехнічний розрахунок підлоги підвалу (підлога по грунту) для IV зони",
+        x2=thermal_calculation_of_the_basement_floor_array
     )
 
 
@@ -391,14 +404,10 @@ def min_ht_resistance_of_external_enclosing_structures():
     t_z = float(input("Температура 3: "))
 
     n = (t_v - t_n) / (t_v - t_z)
-    r_q_min = 3.75
-
-    r_q_1 = n * r_q_min
-    print(r_q_1)
 
     print("Площа перекриття над пдвалом, техпідпіллям: ", calc_area_2)
     a = thermal_calculation_condition_overlap_over_the_underground()
-    calc_value_2 = a * r_q_1
+    calc_value_2 = a * n
     print("Приведений опір перекриття над пдвалом, техпідпіллям: ", calc_value_2)
 
     print("Площа підлоги по грунту: ", calc_area_3)
@@ -412,7 +421,7 @@ def min_ht_resistance_of_external_enclosing_structures():
     print("Площа світлопрозорих конструкцій: ", calc_area_5)
     calc_value_5 = float(input("Приведений опір світлопрозорих конструкцій: "))
 
-    print("Площа вхідних дверей: ", calc_area_5)
+    print("Площа вхідних дверей: ", calc_area_6)
     calc_value_6 = float(input("Приведений опір вхідних дверей: "))
 
     coef_e = int(input("Коефіцієнт додаткових тепловтрат:\n1-для житлових будинків\n2-інше\n-"))
@@ -421,16 +430,14 @@ def min_ht_resistance_of_external_enclosing_structures():
     elif coef_e == 2:
         e = 1.1
 
-
     calc_value_all = e * ((calc_area_1 / calc_value_1) + (calc_area_2 / calc_value_2) + (calc_area_3 / calc_value_3) +
                           (calc_area_4 / calc_value_4) + (calc_area_5 / calc_value_5) + (calc_area_6 / calc_value_6))
     k_sum = calc_value_all / calc_all_initial
-    print(k_sum)
-
-    print("Розрахунок середньої густини повітря, що надходить до приміщення за рахунок інфільтрації та вентиляції")
+    print("Приведений коефіцієнт теплопередачі теплоізоляційної оболонки повітря: ", k_sum)
 
     y_z = 353 / (273 + 0.5 * (t_v - t_op))
-    print(y_z)
+    print("Розрахунок середньої густини повітря, що надходить до приміщення за рахунок інфільтрації та вентиляції: ",
+          y_z)
 
     print("Середня кратність повітрообміну для школи за опалюванльний період")
 
@@ -447,7 +454,7 @@ def min_ht_resistance_of_external_enclosing_structures():
     coef_3 = v_v * v_h
 
     n_ob = (coef_1 + coef_2) / coef_3
-    print(n_ob)
+    print("Середня кратність повітрообміну для школи за опалювальний період", n_ob)
 
     print("Умовний коефіцієнт теплопередачі будинку, що враховує тепловитрати за рахунок інфільтрації та вентиляції")
 
