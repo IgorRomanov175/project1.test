@@ -124,7 +124,7 @@ with sq.connect('main_body.db') as con:
 
     def calculation_coefficient_1():
         sql.execute(
-            """SELECT coefficient FROM heat_transfer_coefficient
+            """SELECT coefficient FROM calculation_coefficient
             WHERE name =  "calculation_coefficient_1" """)
         for result in sql:
             return result[0]

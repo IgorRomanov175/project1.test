@@ -1,8 +1,11 @@
-from array1.linar_heat_transfer_coefficient import *
+from initial_pack.linar_heat_transfer_coefficient import *
 from logic.logic3 import *
 from logic.logic3_1 import *
-from mb_initial_data import *
+from mb_initial_data_test import *
 from mb_logic_template import *
+
+with open("C:\Python_project\project1.test\json\init_main_data_1.json", "r") as json_file:
+    a_json = json.load(json_file)
 
 
 # пункт 3.1.1
@@ -86,212 +89,217 @@ def heat_transfer_resistance_of_external_walls():
     print("Ответ", m4.therm_calc_all1())
 
     print("\nРозрахунок лінійних вузлів\n")
-    flag_1 = int(input("Додати розрахунок на лінійний вузол\n1 - ДА;\n2 - НЕТ;\n-"))
-    while flag_1 == 1:
-        linear_coeff_values = int(input("""Оберіть лінійний коефіцієнт теплопередачі теплопровідного включення:
-        1. Вузол примикання зовнішніх стін із цегли з опорядженням штукатуркою до міжповерхового перекриття
-        2. Вузол примикання зовнішніх стін із залізобетону з опорядженням штукатуркою до міжповерхневого перекриття
-        3. Вузол примикання зовнішніх стін із вентильованим повітрянним прошарком з опорядженням штукатуркою
-до міжповерхневого перекриття
-        4. Вузол примикання зовнішніх стін із ніздрюватого бетону до міжповерхового перекриття
-        5. Вузол примикання зовнішніх стін із цегли з опорядженням штукатуркою до балконного перекриття
-        6. Вузол примикання зовнішніх стін із залізобетону з опорядженням штукатуркою до балконного перекриття
-        7. Вузол примикання зовнішніх стін із ніздрюватого бетону до балконного перекриття
-        8. Вузол кутового сполучення зовнішніх стін із залізобетону та цегли з опорядженням штукатуркою
-        9. Вузол кутового сполучення зовнішніх стін із залізобетону та цегли з вентильованим повітряним прошарком
-        10. Вузол кутового сполучення зовнішніх стін із залізобетону з утепленням та ніздрюватого бетону
-        11. Вузол кутового сполучення зовнішніх стін із цегли з опорядженням штукатуркою
-        12. Вузол кутового сполучення зовнішніх стін із цегли з вентильованим повітряним прошарком
-        13. Вузол кутового сполучення зовнішніх стін із ніздрюватого бетону
-        14. Вузол примикання віконної конструкції до зовнішніх стін із цегли з опорядженням штукатуркою
-в зоні перемички
-        15. Вузол примикання віконної конструкції до зовнішніх стін із цегли з опорядженням штукатуркою
-в зоні підвіконня
-        16. Вузол примикання віконної конструкції до зовнішніх стін із цегли з опорядженням штукатуркою
-в зоні рядового сполучення
-        17. Вузол примикання віконної конструкції до зовнішніх стін із цегли з вентильованим повітряним прошарком
-в зоні перемички
-        18. Вузол примикання віконної конструкції до зовнішніх стін із цегли з вентильованим повітряним прошарком
-в зоні підвіконня
-        19. Вузол примикання віконної конструкції до зовнішніх стін із цегли з вентильованим повітряним прошарком
-в зоні рядового сполучення
-        20. Вузол примикання віконної конструкції до зовнішніх стін із ніздрюватого бетону в зоні перемички
-        21. Вузол примикання віконної конструкції до зовнішніх стін із цегли з ніздрюватого бетону
-в зоні підвіконня
-        22. Вузол примикання віконної конструкції до зовнішніх стін із цегли з ніздрюватого бетону
-в зоні рядового сполучення
-        23. Вузол примикання зовнішніх стін із тришарових панелей на основі важкого бетону до
-міжповерхового перекриття
-        24. Вузол влаштування зовнішніх стін із вентильваним повітряним прошарком на основі дерев'яного каркаса
-        25. Вузол примикання конструкції горищного даху з одношаровою теплоізоляцією до дерев'яної крокви
-        26. Вузол примикання конструкції горищного даху з двошаровою теплоізоляцією
-до дерев'яної крокви та обрешіткою 50мм
-        27. Вузол примикання конструкції горищного даху з двошаровою теплоізоляцією
-до дерев'яної крокви та обрешіткою 100мм
-        28. Вузол примикання конструкції горищного даху з двошаровою теплоізоляцією
-до дерев'яної обрешітки товщиною 50мм
-        29. Вузол примикання конструкції горищного даху з двошаровою теплоізоляцією
-до дерев'яної обрешітки товщиною 100мм
-        30. Вузол примикання конструкції перекриття до внутрішніх стін
-        31. Вузол примикання конструкції перекриття до дерев'яної лаги
-        32. Вузол примикання конструкції підлоги по грунту до стіни цоколя
-        33. Вузол примикання конструкції підлоги по грунту до стіни підвала
-        34. Вузол примикання конструкції по грунту до зовнішніх стін з фасадною теплоізоляцією
-        35. Вузол примикання конструкції по грунту до зовнішніх стін з блоків з ніздрюватого бетону
-        36. Вузол кутового сполучення зовнішніх стін з цегли з додатковою теплоізоляцією та опорядженням штукатуркою
-        37. Вузол примикання до металевого несучого елемента каркаса
-        Оберіть номер вузла: """))
 
-        if linear_coeff_values == 1:
-            linear_coeff = node_1()
-
-        elif linear_coeff_values == 2:
-            linear_coeff = node_2()
-
-        elif linear_coeff_values == 3:
-            linear_coeff = node_3()
-
-        elif linear_coeff_values == 4:
-            linear_coeff = node_4()
-
-        elif linear_coeff_values == 5:
-            linear_coeff = node_5()
-
-        elif linear_coeff_values == 6:
-            linear_coeff = node_6()
-
-        elif linear_coeff_values == 7:
-            linear_coeff = node_7()
-
-        elif linear_coeff_values == 8:
-            linear_coeff = node_8()
-
-        elif linear_coeff_values == 9:
-            linear_coeff = node_9()
-
-        elif linear_coeff_values == 10:
-            linear_coeff = node_10()
-
-        elif linear_coeff_values == 11:
-            linear_coeff = node_11()
-
-        elif linear_coeff_values == 12:
-            linear_coeff = node_12()
-
-        elif linear_coeff_values == 13:
-            linear_coeff = node_13()
-
-        elif linear_coeff_values == 14:
-            linear_coeff = node_14()
-
-        elif linear_coeff_values == 15:
-            linear_coeff = node_15()
-
-        elif linear_coeff_values == 16:
-            linear_coeff = node_16()
-
-        elif linear_coeff_values == 17:
-            linear_coeff = node_17()
-
-        elif linear_coeff_values == 18:
-            linear_coeff = node_18()
-
-        elif linear_coeff_values == 19:
-            linear_coeff = node_19()
-
-        elif linear_coeff_values == 20:
-            linear_coeff = node_20()
-
-        elif linear_coeff_values == 21:
-            linear_coeff = node_21()
-
-        elif linear_coeff_values == 22:
-            linear_coeff = node_22()
-
-        elif linear_coeff_values == 23:
-            linear_coeff = node_23()
-
-        elif linear_coeff_values == 24:
-            linear_coeff = node_24()
-
-        elif linear_coeff_values == 25:
-            linear_coeff = node_25()
-
-        elif linear_coeff_values == 26:
-            linear_coeff = node_26()
-
-        elif linear_coeff_values == 27:
-            linear_coeff = node_27()
-
-        elif linear_coeff_values == 28:
-            linear_coeff = node_28()
-
-        elif linear_coeff_values == 29:
-            linear_coeff = node_29()
-
-        elif linear_coeff_values == 30:
-            linear_coeff = node_30()
-
-        elif linear_coeff_values == 31:
-            linear_coeff = node_31()
-
-        elif linear_coeff_values == 32:
-            linear_coeff = node_32()
-
-        elif linear_coeff_values == 33:
-            linear_coeff = node_33()
-
-        elif linear_coeff_values == 34:
-            linear_coeff = node_34()
-
-        elif linear_coeff_values == 35:
-            linear_coeff = node_35()
-
-        elif linear_coeff_values == 36:
-            linear_coeff = node_36()
-
-        elif linear_coeff_values == 37:
-            linear_coeff = node_37()
-
-        print(linear_coeff)
-
-        linear_lenth = float(input("Лінійний розмір включення: "))
-
-        flag_1 = int(input("\nДодати розрахунок на лінійний вузол\n1 - ДА;\n2 - НЕТ;\n-"))
-
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_1"]["active"] == 1:
+        linear_coeff = node_1()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_1"]["value"]
         m4.therm_calc2(linear_coeff, linear_lenth)
-        print("Ответ", m4.therm_calc_all2())
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_2"]["active"] == 1:
+        linear_coeff = node_2()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_2"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_3"]["active"] == 1:
+        linear_coeff = node_3()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_3"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_4"]["active"] == 1:
+        linear_coeff = node_4()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_4"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_5"]["active"] == 1:
+        linear_coeff = node_5()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_5"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_6"]["active"] == 1:
+        linear_coeff = node_6()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_6"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_7"]["active"] == 1:
+        linear_coeff = node_7()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_7"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_8"]["active"] == 1:
+        linear_coeff = node_8()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_8"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_9"]["active"] == 1:
+        linear_coeff = node_9()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_9"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_10"]["active"] == 1:
+        linear_coeff = node_10()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_10"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_11"]["active"] == 1:
+        linear_coeff = node_11()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_11"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_12"]["active"] == 1:
+        linear_coeff = node_12()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_12"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_13"]["active"] == 1:
+        linear_coeff = node_13()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_13"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_14"]["active"] == 1:
+        linear_coeff = node_14()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_14"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_15"]["active"] == 1:
+        linear_coeff = node_15()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_15"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_16"]["active"] == 1:
+        linear_coeff = node_16()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_16"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_17"]["active"] == 1:
+        linear_coeff = node_17()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_17"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_18"]["active"] == 1:
+        linear_coeff = node_18()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_18"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_19"]["active"] == 1:
+        linear_coeff = node_19()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_19"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_20"]["active"] == 1:
+        linear_coeff = node_20()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_20"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_21"]["active"] == 1:
+        linear_coeff = node_21()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_21"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_22"]["active"] == 1:
+        linear_coeff = node_22()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_22"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_23"]["active"] == 1:
+        linear_coeff = node_23()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_23"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_24"]["active"] == 1:
+        linear_coeff = node_24()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_24"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_25"]["active"] == 1:
+        linear_coeff = node_25()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_25"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_26"]["active"] == 1:
+        linear_coeff = node_26()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_26"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_27"]["active"] == 1:
+        linear_coeff = node_27()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_27"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_28"]["active"] == 1:
+        linear_coeff = node_28()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_28"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_29"]["active"] == 1:
+        linear_coeff = node_29()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_29"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_30"]["active"] == 1:
+        linear_coeff = node_30()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_30"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_31"]["active"] == 1:
+        linear_coeff = node_31()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_31"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_32"]["active"] == 1:
+        linear_coeff = node_32()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_32"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_33"]["active"] == 1:
+        linear_coeff = node_33()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_33"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_34"]["active"] == 1:
+        linear_coeff = node_34()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_34"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_35"]["active"] == 1:
+        linear_coeff = node_35()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_35"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_36"]["active"] == 1:
+        linear_coeff = node_36()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_36"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    if a_json["paragraph 3.1.4"]["linear_coeff_values_37"]["active"] == 1:
+        linear_coeff = node_37()
+        linear_lenth = a_json["paragraph 3.1.4"]["linear_coeff_values_37"]["value"]
+        m4.therm_calc2(linear_coeff, linear_lenth)
+
+    print("Ответ", m4.therm_calc_all2())
 
     print("\nРозрахунок точкових вузлів\n")
-    flag_2 = int(input("\nДодати розрахунок точкового вузла\n1 - ДА;\n2 - НЕТ;\n-"))
-    while flag_2 == 1:
-        point_coeff_values = int(input("""Оберіть точковий коефіцієнт теплопередачі теплопровідного включення:
-        1. Вузол улаштування несучого кронштейна фасадної системи з вентильованим повітряним прошарком
-        2. Вузол улаштування анкера на основі металевого гнучкого Z-подібного елемента фасадної системи
-з опорядженням цеглою
-        3. Вузол улаштування пластикового дюбеля з металевим стрижнем для кріплення теплоізоляційного шару
-в фасадній системі з опорядженням штукатурками
-        4. Вузол улаштування пластикового дюбеля з пластиковим стрижнем для кріплення теплоізоляційного шару
-в фасадній системі з опорядженням штукатурками
-        Оберіть номер вузла: """))
 
-        if point_coeff_values == 1:
-            point_coeff = float(node_1_1())
+    if a_json["paragraph 3.1.4"]["point_coeff_values_1"]["active"] == 1:
+        point_coeff = node_1_1()
+        point_num = a_json["paragraph 3.1.4"]["point_coeff_values_1"]["value"]
+        m4.therm_calc3(point_coeff, point_num)
 
-        if point_coeff_values == 2:
-            point_coeff = float(node_1_2())
+    if a_json["paragraph 3.1.4"]["point_coeff_values_2"]["active"] == 1:
+        point_coeff = node_1_2()
+        point_num = a_json["paragraph 3.1.4"]["point_coeff_values_2"]["value"]
+        m4.therm_calc3(point_coeff, point_num)
 
-        if point_coeff_values == 3:
-            point_coeff = float(node_1_3())
+    if a_json["paragraph 3.1.4"]["point_coeff_values_3"]["active"] == 1:
+        point_coeff = node_1_3()
+        point_num = a_json["paragraph 3.1.4"]["point_coeff_values_3"]["value"]
+        m4.therm_calc3(point_coeff, point_num)
 
-        if point_coeff_values == 4:
-            point_coeff = float(node_1_4())
+    if a_json["paragraph 3.1.4"]["point_coeff_values_4"]["active"] == 1:
+        point_coeff = node_1_4()
+        point_num = a_json["paragraph 3.1.4"]["point_coeff_values_4"]["value"]
+        m4.therm_calc3(point_coeff, point_num)
 
-        point_num = float(input("\nКількість точкових включень: "))
 
-        flag_2 = int(input("\nДодати розрахунок точкового вузла\n1 - ДА;\n2 - НЕТ;\n-"))
-
-    m4.therm_calc3(point_coeff, point_num)
 
     print("Ответ", m4.therm_calc_all3())
     ans = m4.therm_calc_all4()
@@ -399,15 +407,10 @@ def min_ht_resistance_of_external_enclosing_structures():
     print("Площа зовнішніх стін: ", calc_area_1)
     calc_value_1 = float(heat_transfer_resistance_of_external_walls_condition())
     print("Приведений опір зовнішніх стін: ", calc_value_1)
-
-    t_n = float(input("Температура 2: "))
-    t_z = float(input("Температура 3: "))
-
-    n = (t_v - t_n) / (t_v - t_z)
-
+    n = calculation_coefficient_1()
     print("Площа перекриття над пдвалом, техпідпіллям: ", calc_area_2)
-    a = thermal_calculation_condition_overlap_over_the_underground()
-    calc_value_2 = a * n
+    a_therm = thermal_calculation_condition_overlap_over_the_underground()
+    calc_value_2 = a_therm * n
     print("Приведений опір перекриття над пдвалом, техпідпіллям: ", calc_value_2)
 
     print("Площа підлоги по грунту: ", calc_area_3)
@@ -419,16 +422,10 @@ def min_ht_resistance_of_external_enclosing_structures():
     print("Приведений опір горищного перекриття: ", calc_value_4)
 
     print("Площа світлопрозорих конструкцій: ", calc_area_5)
-    calc_value_5 = float(input("Приведений опір світлопрозорих конструкцій: "))
+    calc_value_5 = r_t_s
 
     print("Площа вхідних дверей: ", calc_area_6)
-    calc_value_6 = float(input("Приведений опір вхідних дверей: "))
-
-    coef_e = int(input("Коефіцієнт додаткових тепловтрат:\n1-для житлових будинків\n2-інше\n-"))
-    if coef_e == 1:
-        e = 1.13
-    elif coef_e == 2:
-        e = 1.1
+    calc_value_6 = r_d
 
     calc_value_all = e * ((calc_area_1 / calc_value_1) + (calc_area_2 / calc_value_2) + (calc_area_3 / calc_value_3) +
                           (calc_area_4 / calc_value_4) + (calc_area_5 / calc_value_5) + (calc_area_6 / calc_value_6))
@@ -441,32 +438,18 @@ def min_ht_resistance_of_external_enclosing_structures():
 
     print("Середня кратність повітрообміну для школи за опалюванльний період")
 
-    l_v = 7 * calc_area_7  # нормативне значення кількості припливного повітря під час механічної вентиляції
-    n_v = float(input("Кількість годин механічної вентиляції протягом тижня: "))
-    nu = float(input("Коефіцієнт впливу зустрічного теплового потоку в огороджувальні конструкції: "))
-    n_inf = (168 - 48)  # float(input("Кількість годин інфільтрації протягом тижня: "))
-    v_v = float(input("Коефіцієнт зниження об'єму повітря у будинку: "))
-    v_h = calc_volume_1
-    p_inf = 0.5 * v_v * v_h  # Кількість повітря, що інфільтрується в будинок через огороджувальні конструкції
-
     coef_1 = l_v * n_v / 168
     coef_2 = p_inf * nu * n_inf / 168 * y_z
-    coef_3 = v_v * v_h
+    coef_3 = v_v * calc_volume_1
 
     n_ob = (coef_1 + coef_2) / coef_3
     print("Середня кратність повітрообміну для школи за опалювальний період", n_ob)
 
     print("Умовний коефіцієнт теплопередачі будинку, що враховує тепловитрати за рахунок інфільтрації та вентиляції")
-
-    x2 = 0.278  # розмірний коефіцієнт
-    c = 1  # питома теплоємність повітря
-
-    k_inf = x2 * c * n_ob * v_v * v_h * y_z * nu / calc_all_initial
+    k_inf = x2 * c * n_ob * v_v * calc_volume_1 * y_z * nu / calc_all_initial
     print("Відповідь: ", k_inf)
-
     name = "Загальний коефіцієнт теплопередачі"
     print(name)
-
     k_bud = k_sum + k_inf
     print("Загальний коефіцієнт теплопередачі: ", k_bud)
 

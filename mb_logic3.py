@@ -1,5 +1,9 @@
+import json
+from mb_initial_data_test import *
 from mb_logic_template import *
-from mb_initial_data import *
+
+with open("C:\Python_project\project1.test\json\init_main_data_3.json", "r") as json_file:
+    a_json = json.load(json_file)
 
 
 def heat_consumption_of_the_house_through_the_enclosure():
@@ -17,18 +21,21 @@ def heat_consumption_of_the_house_through_the_enclosure():
 def domestic_heat_during_the_heating_season():
     print("\n#######################################################################################################\n")
     # Побутове надходження тепла протягом опалювального сезону
-    q_t_1 = float(input("Кількість віділеного тепла на 1 людину: "))
-    n_1 = int(input("Кількість людей: "))
-    t_t_1 = int(input("Кількість годин на тиждень: "))
-    t_m_1 = int(input("Кількість годин на місяць: "))
+    q_t_1 = a_json["domestic_heat_during_the_heating_season"]["domestic_heat_during_the_heating_season_people"]["q_t_1"]
+    n_1 = a_json["domestic_heat_during_the_heating_season"]["domestic_heat_during_the_heating_season_people"]["n_1"]
+    t_t_1 = a_json["domestic_heat_during_the_heating_season"]["domestic_heat_during_the_heating_season_people"]["t_t_1"]
+    t_m_1 = a_json["domestic_heat_during_the_heating_season"]["domestic_heat_during_the_heating_season_people"]["t_m_1"]
     q_1 = (q_t_1 * n_1 * (t_t_1 / t_m_1)) / 1000
     print("Тепловиділення від людей протягом тижня: ", q_1)
 
-    q_t_2 = float(input("Кількість віділеного тепла на 1 техніку: "))
-    n_2 = int(input("Кількість техніки: "))
-    t_t_2 = int(input("Кількість годин на тиждень: "))
-    t_m_2 = int(input("Кількість годин на місяць: "))
-
+    q_t_2 = a_json["domestic_heat_during_the_heating_season"]["domestic_heat_during_the_heating_season_tech"][
+        "q_t_2"]  # Кількість віділеного тепла на 1 техніку
+    n_2 = a_json["domestic_heat_during_the_heating_season"]["domestic_heat_during_the_heating_season_tech"][
+        "n_2"]  # Кількість техніки
+    t_t_2 = a_json["domestic_heat_during_the_heating_season"]["domestic_heat_during_the_heating_season_tech"][
+        "t_t_2"]  # Кількість годин на тиждень
+    t_m_2 = a_json["domestic_heat_during_the_heating_season"]["domestic_heat_during_the_heating_season_tech"][
+        "t_m_2"]  # Кількість годин на місяць
     q_2 = (q_t_2 * n_2 * (t_t_2 / t_m_2) * 0.95) / 1000
     print("Тепловиділення від техніки протягом тижня: ", q_2)
 
@@ -42,20 +49,19 @@ def domestic_heat_during_the_heating_season():
     data_base_4(name, q_vnp)
 
 
-
 def heat_flow_through_the_windows():
     print("\n#######################################################################################################\n")
     print("Площа світлових прорізів фасадів будинку")
-    f_n = float(input("Площа світлових прорізів фасадів - північ: "))
-    f_e = float(input("Площа світлових прорізів фасадів - схід: "))
-    f_s = float(input("Площа світлових прорізів фасадів - південь: "))
-    f_w = float(input("Площа світлових прорізів фасадів - захід: "))
+    f_n = a_json["heat_flow_through_the_windows"]["area"]["N"]  # Площа світлових прорізів фасадів - північ
+    f_e = a_json["heat_flow_through_the_windows"]["area"]["E"]  # Площа світлових прорізів фасадів - схід
+    f_s = a_json["heat_flow_through_the_windows"]["area"]["S"]  # Площа світлових прорізів фасадів - південь
+    f_w = a_json["heat_flow_through_the_windows"]["area"]["W"]  # Площа світлових прорізів фасадів - захід
 
     print("Суми сумарної сонячної радіації")
-    i_n = float(input("Суми сумарної сонячної радіації - північ: "))
-    i_e = float(input("Суми сумарної сонячної радіації - схід: "))
-    i_s = float(input("Суми сумарної сонячної радіації - південь: "))
-    i_w = float(input("Суми сумарної сонячної радіації - захід: "))
+    i_n = a_json["heat_flow_through_the_windows"]["radiation"]["N"]  # Суми сумарної сонячної радіації - північ
+    i_e = a_json["heat_flow_through_the_windows"]["radiation"]["E"]  # Суми сумарної сонячної радіації - схід
+    i_s = a_json["heat_flow_through_the_windows"]["radiation"]["S"]  # Суми сумарної сонячної радіації - південь
+    i_w = a_json["heat_flow_through_the_windows"]["radiation"]["W"]  # Суми сумарної сонячної радіації - захід
 
     q_s_m = e_v_in * e_v_out * (f_n * i_n + f_e * i_e + f_s * i_s + f_w * i_w)
     q_s = (q_s_m * 2.778) / 10

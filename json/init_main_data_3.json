@@ -1,0 +1,30 @@
+{
+  "domestic_heat_during_the_heating_season": {
+  "domestic_heat_during_the_heating_season_people": {
+    "q_t_1": 90,
+    "n_1": 500,
+    "t_t_1": 40,
+    "t_m_1": 168
+  },
+  "domestic_heat_during_the_heating_season_tech": {
+    "q_t_2": 300,
+    "n_2": 60,
+    "t_t_2": 40,
+    "t_m_2": 168
+  }
+},
+  "heat_flow_through_the_windows": {
+    "area": {
+      "N": 151.7,
+      "E": 145.3,
+      "S": 128.0,
+      "W": 129.7
+    },
+    "radiation": {
+      "N": 764,
+      "E": 339,
+      "S": 782,
+      "W": 338
+    }
+  }
+}

@@ -1,4 +1,4 @@
-from mb_initial_data import *
+from mb_initial_data_test import *
 from mb_logic_db import *
 
 

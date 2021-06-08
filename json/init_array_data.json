@@ -1,0 +1,113 @@
+{
+  "linar_coefficient": {
+    "node1": {
+      "subnode1.1": 0,
+      "subnode1.2": 0,
+      "subnode1.3": 3
+    },
+    "node2": {
+      "subnode1.1": 0,
+      "subnode1.2": 0,
+      "subnode1.3": 0
+    },
+    "node3": {
+      "subnode1.1": 0,
+      "subnode1.2": 0,
+      "subnode1.3": 0
+    },
+    "node4": {
+      "subnode1.1": 0,
+      "subnode1.2": 0,
+      "subnode1.3": 0
+    },
+    "node5": {
+      "subnode1.1": 0,
+      "subnode1.2": 0,
+      "subnode1.3": 0
+    },
+    "node6": {
+      "subnode1.1": 0,
+      "subnode1.2": 0,
+      "subnode1.3": 0
+    },
+    "node7": {
+      "subnode1.1": 0,
+      "subnode1.2": 0,
+      "subnode1.3": 0
+    },
+    "node8": {
+      "subnode1.1": 0,
+      "subnode1.2": 0,
+      "subnode1.3": 0
+    },
+    "node9": {
+      "subnode1.1": 0,
+      "subnode1.2": 0,
+      "subnode1.3": 0
+    },
+    "node10": {
+      "subnode1.1": 0,
+      "subnode1.2": 0,
+      "subnode1.3": 0
+    },
+    "node11": {
+      "subnode1.1": 0,
+      "subnode1.2": 0,
+      "subnode1.3": 0
+    },
+    "node12": {
+      "subnode1.1": 0,
+      "subnode1.2": 0,
+      "subnode1.3": 0
+    },
+    "node13": {
+      "subnode1.1": 0,
+      "subnode1.2": 0,
+      "subnode1.3": 0
+    },
+    "node14": 3,
+    "node15": 3,
+    "node16": 3,
+    "node17": 0,
+    "node18": 0,
+    "node19": 0,
+    "node20": 0,
+    "node21": 0,
+    "node22": 0,
+    "node23": 0,
+    "node24": 0,
+    "node25": 0,
+    "node26": 0,
+    "node27": 0,
+    "node28": 0,
+    "node29": 0,
+    "node30": {
+      "subnode1.1": 0,
+      "subnode1.2": 0,
+      "subnode1.3": 0
+    },
+    "node31": 0,
+    "node32": 0,
+    "node33": 0,
+    "node34": 0,
+    "node35": 0,
+    "node36": {
+      "subnode1.1": 0,
+      "subnode1.2": 0,
+      "subnode1.3": 0
+    },
+    "node37": {
+      "actice": 0,
+      "x1": 0,
+      "x2": 0,
+      "x3": 0,
+      "x4": 0
+    }
+  },
+  "point_coefficient": {
+    "node1": 0,
+    "node2": 0,
+    "node3": 0,
+    "node4": 1
+  }
+}
