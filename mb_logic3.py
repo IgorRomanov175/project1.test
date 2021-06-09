@@ -1,5 +1,5 @@
 import json
-from mb_initial_data_test import *
+from mb_initial_data import *
 from mb_logic_template import *
 
 with open("C:\Python_project\project1.test\json\init_main_data_3.json", "r") as json_file:
@@ -65,7 +65,7 @@ def heat_flow_through_the_windows():
 
     q_s_m = e_v_in * e_v_out * (f_n * i_n + f_e * i_e + f_s * i_s + f_w * i_w)
     q_s = (q_s_m * 2.778) / 10
-    name = "Площа світлових прорізів фасадів будинку"
+    name = "Теплові надходження через вікна від сонячної радіації"
     print(name, ": ", q_s)
 
     data_base_4(name, q_s)

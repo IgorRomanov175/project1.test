@@ -1,7 +1,7 @@
 from logic.logic1 import *
 from logic.logic2 import *
 from mb_logic_db import *
-from mb_initial_data_test import t_v, t_n, t_z
+from mb_initial_data import t_v, t_n, t_z
 
 
 def thermal_calculation_template_1(x1, x2, x3, x4):

@@ -2,23 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09082d89-cd07-4806-b7bd-cd5050c5f027" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/initial_pack/mb_initial_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json/init_array_data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json/init_main_data_1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json/init_main_data_3.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/array1/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/initial_pack/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/array1/linar_heat_transfer_coefficient.py" beforeDir="false" afterPath="$PROJECT_DIR$/initial_pack/linar_heat_transfer_coefficient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/init_main_data_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/json/init_main_data_1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_body.db" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_body.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_body.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mb_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mb_initial_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_initial_data_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mb_initial_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_initial_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mb_initial_data_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_initial_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mb_logic1.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mb_logic2.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mb_logic3.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mb_logic_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/mb_logic_template.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.db" beforeDir="false" afterPath="$PROJECT_DIR$/result.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/result_db.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +134,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mb_initial_data_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="mb_initial_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="project1.test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -153,7 +146,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Python_project\project1.test\mb_initial_data_test.py" />
+      <option name="SCRIPT_NAME" value="C:\Python_project\project1.test\mb_initial_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -310,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623003587174</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add json files">
+      <created>1623173277050</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1623173277050</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -351,6 +351,7 @@
     <MESSAGE value="mb_logic3.py finished" />
     <MESSAGE value="add new folder for calculate energy effency class" />
     <MESSAGE value="reworking parametrs input in array forms" />
-    <option name="LAST_COMMIT_MESSAGE" value="reworking parametrs input in array forms" />
+    <MESSAGE value="add json files" />
+    <option name="LAST_COMMIT_MESSAGE" value="add json files" />
   </component>
 </project>

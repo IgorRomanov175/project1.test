@@ -1,7 +1,7 @@
 from initial_pack.linar_heat_transfer_coefficient import *
 from logic.logic3 import *
 from logic.logic3_1 import *
-from mb_initial_data_test import *
+from mb_initial_data import *
 from mb_logic_template import *
 
 with open("C:\Python_project\project1.test\json\init_main_data_1.json", "r") as json_file:

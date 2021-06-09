@@ -203,7 +203,7 @@ def domestic_heat_during_the_heating_season_condition():
 def heat_flow_through_the_windows_condition():
     sql_result.execute(
         """SELECT thermal_calculation_result FROM thermal_calculation_result_1_3
-        WHERE thermal_calculation_name = "Площа світлових прорізів фасадів будинку" """)
+        WHERE thermal_calculation_name = "Теплові надходження через вікна від сонячної радіації" """)
     for result in sql_result:
         return result[0]
 
